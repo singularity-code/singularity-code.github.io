@@ -23,13 +23,14 @@ Manifest.xml 을 열어보면 최소/목표사양의 Android Version을 지정�
 보통의 경우 설치할폰에 설정에 들어가서 Android버젼을 먼저 확인한후
 개발툴로 돌아와 개발 버젼을 폰에 맞게 맞춰주시면 대부분 해결이 가능합니다.
 
-Android Studio에서는 AndroidManifest.xml의 <users-sdk> 항목이 해당됩니다
+Android Studio에서는 AndroidManifest.xml의 `<users-sdk>` 항목이 해당됩니다
 
 ```xml
 <users-sdk android:minSdkVersion="integer"
            android:targetSdkVersion="integer"
-           android:maxSdkVersion="integer"/> 
+           android:maxSdkVersion="integer"/>
 ```
+
 안드로이드 스튜디오에서는 버젼을 번호로 입력해야합니다. 아래 표를 참고해주세요.
 
 예를 들면 안드로이드 롤리팝 버젼(21)으로 개발했는데 폰이 허니콤(11)이면 패키지파일을 제대로 설치할수없다는 것입니다.

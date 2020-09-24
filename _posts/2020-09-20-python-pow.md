@@ -7,12 +7,15 @@ categories: python
 
 파이썬에서 루트,제곱을 구하는 방법은 여러가지가 있지만 크게 두가지가 있습니다.
 `제곱`
+
 ```python
 a ** n
 math.pow(a, n)
 ```
+
 `루트`
-```
+
+```python
 x ** 0.5
 math.sqrt(x)
 ```
@@ -47,25 +50,29 @@ class Line(object):
 
 결과를 출력해보겠습니다.
 
-1. Tuple 2 개 (두개의 점)를 생성합니다.
+1.Tuple 2 개 (두개의 점)를 생성합니다.
+
 ```python
 coor1 = (3, 2)
 coor2 = (8, 10)
 ```
 
-2. 클래스를 바탕으로 Line 오브젝트를 생성합니다.
+2.클래스를 바탕으로 Line 오브젝트를 생성합니다.
+
 ```python
 line = Line(coor1, coor2)
 ```
 
-3. 두점간의 경사를 계산합니다.
+3.두점간의 경사를 계산합니다.
+
 ```python
 line.slope()
 ```
 
 결과 >> 1.6
 
-4. 두점간의 거리 계산하기
+4.두점간의 거리 계산하기
+
 ```python
 line.distance()
 ```

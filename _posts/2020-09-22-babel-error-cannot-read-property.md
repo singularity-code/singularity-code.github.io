@@ -11,6 +11,7 @@ categories: node.js babel webpack
 
 ***Before***
 .babelrc
+
 ```json
 // .babelrc file
 {
@@ -26,7 +27,9 @@ categories: node.js babel webpack
   ]
 }
 ```
+
 webpack.config.js
+
 ```json
 module: {
     rules: [
@@ -40,8 +43,11 @@ module: {
     ]
   },
 ```
+
 ***After***
+
 .babelrc
+
 ```json
 {
   "presets": [
@@ -54,10 +60,14 @@ module: {
       }
     }]
   ]
-} 
+}
+
 ```
+
 webpack.config.js
+
 ```json
+
 module: {
     rules: [
       {
