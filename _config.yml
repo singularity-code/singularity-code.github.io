@@ -17,9 +17,9 @@ minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "D's Blog Test"
+title                    : "DB Test"
 title_separator          : "-"
-subtitle                 : "python javascript"
+subtitle                 : "가끔은 생각하지도 못한 누군가가 아무도 생각하지 못한 일을 해낸다"
 name                     : "D"
 description              : "javascript, java, python, android"
 url                      : "https://singularity-code.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
