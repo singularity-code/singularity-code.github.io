@@ -118,18 +118,27 @@ Windows 10 의 고질적인 문제로 작업관리자(Task Manager)에 들어가
 
     아래경로로 따라가시거나,
     Regedit 편집기에 다음 텍스트를 복사/붙이기 하시면 해당 경로로 이동합니다.
+    Windows 빌드 1904 에서는 ControlSet001 항목으로 변경되어 있습니다
 
 ```bash
 Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters
 ```
 
+또는
+
+```bash
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management\PrefetchParameters
+```
+
 ![disk12](https://dongyeopblog.files.wordpress.com/2016/12/disk3_2.png)
-    항목에 도착하시면 EnablePrefetcher와 EnableSuperfetch가 보입니다.
+
+        항목에 도착하시면 EnablePrefetcher와 EnableSuperfetch가 보입니다.
 
 ![disk13](https://dongyeopblog.files.wordpress.com/2016/12/disk3_3.png)
 
-> 2019 Update 최근 업데이트 후에는 다음과 같이 보일 수 있습니다.
-    Sysmain(Superfetch)는 UI에서 비활성화 시켜주시고 EnablePrefetcher 만 진행하시면 됩니다.
+> 2019 Update 최근 업데이트 후에는 다음과 같이 Superfetch는 없이 보일 수 있습니다.
+Sysmain(Superfetch)는 UI에서 비활성화 시켜주시고 EnablePrefetcher 만 진행하시면 됩니다.
+Prefetcher값을 2로 바꾸어 줍니다.
 
 ![disk14](https://dongyeopblog.files.wordpress.com/2016/12/1-1.jpg)
 
@@ -142,14 +151,14 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Mem
 
 비활성화는 0을 입력해야 되는거 아닌가 하는것인데요. 관련 옵션은 다음과 같습니다.
 
-Sysmain (Superfetch) 는 1을 입력합니다.
+***Sysmain (Superfetch)*** 는 1을 입력합니다.
 
     0 – Disable (비활성화)
     1 – Enable SuperFetch for boot files only (부트시 적용)
     2 – Enable SuperFetch for applications only (앱에만 적용)
     3 – Enable SuperFetch for both boot files and applications (앱과 부트 모두적용)
 
-Prefetcher 는 1과 2의 속성이 반대로 입니다. Prefetcher는 “2”를 입력하셔야 합니다.
+***Prefetcher*** 는 1과 2의 속성이 반대로 입니다. Prefetcher는 “2”를 입력하셔야 합니다.
 
     0 – Disable Prefetcher
     1 – Application launch Prefetching enabled (앱에만 적용)
