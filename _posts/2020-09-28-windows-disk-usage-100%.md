@@ -128,7 +128,7 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Mem
 
 ![disk13](https://dongyeopblog.files.wordpress.com/2016/12/disk3_3.png)
 
-> 2019 Update 최근 업데이트 후에는 다음과 같이 보일 수 있습니다. 
+> 2019 Update 최근 업데이트 후에는 다음과 같이 보일 수 있습니다.
     Sysmain(Superfetch)는 UI에서 비활성화 시켜주시고 EnablePrefetcher 만 진행하시면 됩니다.
 
 ![disk14](https://dongyeopblog.files.wordpress.com/2016/12/1-1.jpg)
