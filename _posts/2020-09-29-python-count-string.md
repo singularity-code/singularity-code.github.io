@@ -8,7 +8,7 @@ categories: python string count built-in
 
 스펙 정의는 다음과 같습니다.
 
-#### `string.count(s, sub[, start[, end]])`
+**`string.count(s, sub[, start[, end]])`**
 
 ***Return the number of (non-overlapping) occurrences of substring sub in string s[start:end].***
 ***Defaults for start and end and interpretation of negative values are the same as for slices.***
