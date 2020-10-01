@@ -6,6 +6,7 @@ categories: js string count
 
 String.match() 와 정규표현식을 사용해서 특정문자가 string 문자열에 몇번 포함하는지 세는방법입니다.
 
+Code
 
 ```js
 const a = 'ablaijclwiejc'
@@ -17,6 +18,12 @@ console.log(result.length)
 // regexp 없이사용
 console.log(a.match())
 ```
+
+Run
+
+![pic1](../_images/js-string-match.png)
+
+---
 
 스펙정의
 
