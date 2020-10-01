@@ -6,7 +6,7 @@ categories: python string reverse
 
 파이썬에서 문자열을 거꾸로 만드는 방법입니다.
 
-##### 문자열을 하나씩, 반대로 잘라서 다시 입력시킨후 출력하는방법
+**문자열을 하나씩, 반대로 잘라서 다시 입력시킨후 출력하는방법**
 
 ```python
 s = 'Reverse this strings'
@@ -19,7 +19,7 @@ print s
 
 ---
 
-##### Reverse()를 이용하는 방법
+**Reverse()를 이용하는 방법**
 
 ```python
 s = 'Reverse this strings'
@@ -31,7 +31,7 @@ print ''.join(reversed(s))
 
 ---
 
-##### 파이썬적인 코드
+**파이썬적인 코드**
 
 ```python
 print 'Reverse this strings'[::-1]
