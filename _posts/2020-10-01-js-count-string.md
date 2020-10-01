@@ -21,7 +21,7 @@ console.log(a.match())
 
 Run
 
-![pic1](../_images/js-string-match.png)
+![pic1](https://github-io-dblog.s3-ap-southeast-2.amazonaws.com/js-string-match.png)
 
 ---
 
