@@ -1,5 +1,5 @@
 ---
-title: "자바스크립트 문자열에서 단어세기 (JS count letter in a string)"
+title: "자바스크립트 문자열에서 단어세기 (JavaScript count letter in a string)"
 date: 2020-10-01 10:48:00 -0400
 categories: js string count
 ---
