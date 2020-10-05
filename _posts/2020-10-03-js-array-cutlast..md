@@ -1,5 +1,5 @@
 ---
-title: "[자바스크립트] Array 마지막 자르기 (Cut last element of an Array)"
+title: "[자바스크립트] Array 마지막 자르기 (Javascript Cut last element of an Array)"
 date: 2020-10-05 21:00:00 -0400
 categories: js array cut
 ---
