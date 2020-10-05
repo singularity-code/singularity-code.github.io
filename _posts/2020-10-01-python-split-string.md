@@ -8,7 +8,7 @@ categories: python string split
 
 ---
 
-1. split()
+1.split()
 
 ```python
 w = 'tommorowtommorowtommorowtommorw'
@@ -19,7 +19,7 @@ w.split('o')
 
 ---
 
-2. partition()
+2.partition()
 
 ```python
 w = 'tommorowtommorowtommorowtommorw'
