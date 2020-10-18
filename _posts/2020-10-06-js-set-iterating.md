@@ -1,5 +1,5 @@
 ---
-title: "[자바스크립트] Set 탐색하기/반복문 (Javascript Set Iteration)"
+title: "자바스크립트 Set 탐색하기/반복문 (Javascript Set Iteration)"
 date: 2020-10-06 10:34:00 -0400
 categories: js set iteration
 ---

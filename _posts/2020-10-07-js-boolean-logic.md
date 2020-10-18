@@ -1,5 +1,5 @@
 ---
-title: "[자바스크립트] Boolean Logic"
+title: "자바스크립트 Boolean Logic"
 date: 2020-10-07 16:34:00 -0400
 categories: js boolean logic
 ---

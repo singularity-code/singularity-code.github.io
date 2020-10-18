@@ -1,5 +1,5 @@
 ---
-title: "[자바스크립트] Try Catch Finally"
+title: "자바스크립트 예외처리 (Try Catch Finally)"
 date: 2020-10-12 11:34:00 -0400
 categories: js object loop
 ---

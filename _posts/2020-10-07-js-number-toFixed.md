@@ -1,5 +1,5 @@
 ---
-title: "[자바스크립트] 고정 소수점 표기법 (JS fixed float number)"
+title: "자바스크립트 고정 소수점 표기법 (JS fixed float number)"
 date: 2020-10-07 16:34:00 -0400
 categories: js number tofixed
 ---
