@@ -1,5 +1,5 @@
 ---
-title: "자바스크립트 오브젝트 루프 (Loop through an Object)"
+title: "자바스크립트 객체 반복문 (Loop through an Object)"
 date: 2020-10-09 09:34:00 -0400
 categories: js object loop
 ---
