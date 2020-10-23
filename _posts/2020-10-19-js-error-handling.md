@@ -1,7 +1,7 @@
 ---
 title: "자바스크립트 예외처리 (Try Catch Finally)"
 date: 2020-10-12 11:34:00 -0400
-categories: js object loop
+categories: js exception error handling try catch finally
 ---
 try 문은 하나 이상의 문을 포함하는 try- 블록으로 구성됩니다. 단일 문에도 {}를 항상 사용해야합니다. 최소한 하나의 catch-block 또는 finally-block이 있어야합니다. 이것은 try 문에 대한 세 가지 형식을 제공합니다.
 
@@ -79,7 +79,6 @@ try {
   console.log('No error on first try');
 }
 ```
-
 
 #### 스펙정의
 
