@@ -9,7 +9,7 @@ But recent version of `Function Component` also use "State" features using Hook 
 
 React recommand to use functional component for the future.
 
-More information: [Component and props](https://reactjs.org/docs/components-and-props.html)
+More information: [https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html)
 
 Default React Class Component
 
