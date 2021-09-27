@@ -1,5 +1,5 @@
 ---
-title: "React Function and Class Component Template"
+title: "[React.js] Function and Class Component Template"
 date: 2021-09-27 12:34:00 -0400
 categories: react
 ---
