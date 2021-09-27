@@ -11,6 +11,8 @@ React recommand to use functional component for the future.
 
 More information: [https://reactjs.org/docs/components-and-props.html](https://reactjs.org/docs/components-and-props.html)
 
+<a href="https://reactjs.org/docs/components-and-props.html" target="_blank">React.js Component and props</a>
+
 Default React Class Component
 
 ```js
