@@ -1,6 +1,6 @@
 ---
 title: "[AWS] CLI - S3 Presign URL"
-date: 2020-10-01 09:34:00 -0400
+date: 2020-10-01 16:34:00 -0400
 categories: aws
 ---
 
