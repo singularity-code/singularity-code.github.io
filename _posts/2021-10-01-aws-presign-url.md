@@ -4,6 +4,8 @@ date: 2020-10-01 16:34:00 -0400
 categories: aws
 ---
 
+CLI Command to set S3 Presign URL to the object
+
 ```sh
 # choose proper region
 aws s3 presign s3://bucketname/object --region my-region
