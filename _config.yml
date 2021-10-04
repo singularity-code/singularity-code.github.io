@@ -149,6 +149,8 @@ include:
   - _pages/aws
   - _pages/js
   - _pages/python
+  - _pages/react
+  - _pages/jquery
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
