@@ -1,6 +1,6 @@
 ---
 title: "[React.js] UseMemo Hook"
-date: 2020-01-01 08:00:00 -0400
+date: 2020-10-05 08:00:00 -0400
 categories: js react
 ---
 
@@ -51,3 +51,6 @@ const AverageMemo = () => {
 
 export default AverageMemo;
 ```
+
+Official Document
+![Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
