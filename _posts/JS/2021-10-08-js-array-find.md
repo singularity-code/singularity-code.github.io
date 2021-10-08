@@ -1,5 +1,5 @@
 ---
-title: " "
+title: "[JS] Find an object in an array"
 date: 2021-10-08 08:00:00 -0400
 categories: js array search
 ---

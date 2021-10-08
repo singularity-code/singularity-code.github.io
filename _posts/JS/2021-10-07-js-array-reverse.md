@@ -13,4 +13,4 @@ console.log( arr ); // 5,4,3,2,1
 
 MDN Web Docs
 
-![Array.prototype.reverse](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse" target="_blank">Array.prototype.reverse</a>
