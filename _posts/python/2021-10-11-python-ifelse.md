@@ -14,5 +14,3 @@ elif x < 0:
 else:
   print("x is zero")
 ```
-
-<a href="https://" target="_blank">TITLE</a>
