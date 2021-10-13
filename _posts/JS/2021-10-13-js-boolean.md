@@ -11,8 +11,8 @@ Baisc boolean logic sample.
 // || => true if one is ture
 // ! (NOT) => inverts true /false value
 
-var firstName = "John";
-var age = 20;
+const firstName = "John";
+const age = 20;
 
 if (age < 13) {
 	console.log(firstName + ' is a boy');
