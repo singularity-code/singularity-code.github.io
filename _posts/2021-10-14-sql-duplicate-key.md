@@ -25,7 +25,8 @@ VALUES('sample@gmail.com', 'testuser');
 `DELETE EXISTING ROW and INSERT NEW ROW`
 
 ```sql
-REPLACE INTO `user`(`email`, `id`) VALUES('sample@gmail.com', 'testuser');
+REPLACE INTO `user`(`email`, `id`) 
+VALUES('sample@gmail.com', 'testuser');
 ```
 
 ### ON DUPLICATE KEY UPDATE
@@ -33,6 +34,7 @@ REPLACE INTO `user`(`email`, `id`) VALUES('sample@gmail.com', 'testuser');
 `UPDATE ROW when the key is duplicated`
 
 ```sql
-INSERT INTO `user`(`email`, `id`) VALUES('sample@gmail.com', 'testuser')
+INSERT INTO `user`(`email`, `id`) 
+VALUES('sample@gmail.com', 'testuser')
     ON DUPLICATE KEY UPDATE `id`=VALUES(`id`);
 ```
