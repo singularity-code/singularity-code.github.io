@@ -7,7 +7,7 @@ categories: js console time
 This sample shows count execution time for a function.
 
 ```js
-test = () => {
+const test = () => {
   let a = 0;
   for (i = 0; i <= 100000; i++) {
     a++;
