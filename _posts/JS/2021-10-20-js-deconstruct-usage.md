@@ -29,14 +29,13 @@ function ajax2({ title, url, params, onSuccess, onFail, onCallback }) {
 
 // Use it
 let request = {
-  title: "update",
   url: "/data/update",
+  title: "update",
+  onCallback: () => {
+    console.log("Callback Function");
+  },  
   onSuccess: () => {
     console.log("Successful!");
   },
-  onCallback: () => {
-    console.log("Callback Function");
-  },
 };
-ajax2(request);
 ```
