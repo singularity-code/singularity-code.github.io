@@ -38,4 +38,7 @@ let request = {
     console.log("Successful!");
   },
 };
+
+// Run
+ajax2(request);
 ```
