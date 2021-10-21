@@ -29,6 +29,13 @@ console.log(generator.next().done == true) // true
 
 Another example
 ```js
+function* numGen(max) {
+  let index = 0;
+  while (index <= max) {
+    yield index++;
+  }
+}
+
 const generator2 = numGen(2);
 
 console.log(generator2.next().value); // 0
