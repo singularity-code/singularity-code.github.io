@@ -9,11 +9,11 @@ categories: macOS DS_STORE
 .DS_Store is a file that stores custom attributes of its containing folder, such as the position of icons or the choice of a background image.
 
 ```sh
-#OFF
+# OFF for network storage
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
 
 ```sh
-#ON
+# ON for network storage
 defaults write com.apple.desktopservices DSDontWriteNetworkStores false
 ```
