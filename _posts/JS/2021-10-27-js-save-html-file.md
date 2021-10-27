@@ -13,7 +13,7 @@ const save = function () {
 	var bl = new Blob(htmlContent, { type: 'text/html' });
 	var a = document.createElement('a');
 	a.href = URL.createObjectURL(bl);
-	a.download = 'test-transcripts';
+	a.download = 'test-document';
 	a.hidden = true;
 	document.body.appendChild(a);
 	a.click();
