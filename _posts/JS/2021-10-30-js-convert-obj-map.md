@@ -4,6 +4,8 @@ date: 2021-10-30 08:00:00 -0400
 categories: js map object convert
 ---
 
+Simple example of convert an object to a map.
+
 ```js
 let obj = {
   name: "John",
