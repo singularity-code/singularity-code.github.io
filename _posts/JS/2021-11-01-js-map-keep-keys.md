@@ -24,5 +24,4 @@ console.log(map);
 map.set(1, 1);
 // Map(3) { '1' => 'str1', 1 => 1, true => 'bool1' }
 console.log(map);
-
 ```
