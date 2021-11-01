@@ -9,7 +9,7 @@ Simple example shows that JS Map keeps the keys compare to an object does not ke
 ```js
 var obj = {
   1: "1",
-  1: "1",
+  "1": "1",
 };
 // { '1': '1' }
 console.log(obj);
@@ -21,7 +21,7 @@ map.set(true, "bool1");
 // Map(3) { '1' => 'str1', 1 => 1, true => 'bool1' }
 console.log(map);
 
-map.set(1, 1);
-// Map(3) { '1' => 'str1', 1 => 1, true => 'bool1' }
+map.set(1, 2);
+// Map(3) { '1' => 'str1', 1 => 2, true => 'bool1' }
 console.log(map);
 ```
