@@ -1,5 +1,5 @@
 ---
-title: " "
+title: "[JS] Map built in functions"
 date: 2021-11-04 13:00:00 -0400
 categories: js map method
 ---
