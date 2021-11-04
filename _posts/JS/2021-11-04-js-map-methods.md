@@ -13,12 +13,6 @@ map.clear() – Clear the map.
 map.size – Return the size of the map (How many keys in the map).
 
 ```js
-var obj = {
-  1 : "1",
-  "1" : "1"
-}
-console.log(obj)
-
 var map = new Map();
 map.set("1", "str1");
 map.set(1, "num1");
