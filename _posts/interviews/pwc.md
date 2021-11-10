@@ -19,7 +19,6 @@ immediately-invoked function expression
 })()
 console.log('after loop i is', i) // ReferenceError: i is not defined
 
-//////////
 // var i 전역변수화 됨 IIFE
 (function() {
   for(i=0; i<10; i++) {
@@ -28,7 +27,7 @@ console.log('after loop i is', i) // ReferenceError: i is not defined
 })()
 console.log('after loop i is', i) // after loop i is 10
 
-// 아까랑 다르게 실행하면 i is not defined라는 에러가 발생한다.
+// 'use strict' i is not defined라는 에러가 발생한다.
 (function() {
   'use strict'
   for(i=0; i<10; i++) {
