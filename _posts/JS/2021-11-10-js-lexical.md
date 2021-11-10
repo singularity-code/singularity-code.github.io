@@ -4,7 +4,7 @@ date: 2021-11-10 10:00:00 -0400
 categories: js scopre IIFE lexical
 ---
 
-Case 1. Even with `var` the variable is hoisting inside the IIFE.
+Case 1. `var` the variable is not hoisting outside of IIFE scope.
 
 ```js
 (function() {
