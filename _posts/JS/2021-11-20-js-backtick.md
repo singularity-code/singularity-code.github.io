@@ -4,9 +4,9 @@ date: 2021-11-20 22:00:00 -0400
 categories: js string backtick
 ---
 
-Use of backtick `` will allow you to combine strings
+Below multiple liens of strings with "" are not correct syntax in JS.
 
-Below multiple liens of strings with "" are not allowed in JS.
+Use of backtick `` will allow you to combine strings
 
 ```js
 let originList = "Guests:
