@@ -24,9 +24,9 @@ int bubble_sort()
     int sort_counter = 0;
     for (int i = 0; i < 8; i++)
     {
+        // swap large number to end of an array
         if (candidates[i + 1].name != NULL && (candidates[i].scores > candidates[i + 1].scores))
         {
-            // swap large number to end of an array
             swap(&candidates[i], &candidates[i + 1]);
             sort_counter++;
         }
