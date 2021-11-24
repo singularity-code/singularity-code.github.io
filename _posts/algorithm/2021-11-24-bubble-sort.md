@@ -9,6 +9,8 @@ This example shows that `Bubble Sort` custom type in C.
 Place largest number to the end of an array when it sorted.
 
 ```c
+// guess that other library is already included such as stdio.h
+
 typedef struct
 {
     string name;
