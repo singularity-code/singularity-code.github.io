@@ -156,6 +156,7 @@ include:
   - _pages/jquery
   - _pages/web
   - _pages/algorithm
+  - _pages/spring
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
