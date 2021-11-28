@@ -29,7 +29,7 @@ The `admin` `user` here is just an example.
        http://www.springframework.org/schema/security
        http://www.springframework.org/schema/security/spring-security-4.2.xsd">
 	<http auto-config="false">
-        Something
+			...
 	</http>
 	<authentication-manager>
 		<authentication-provider>
