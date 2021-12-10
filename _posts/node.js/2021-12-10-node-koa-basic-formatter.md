@@ -1,5 +1,5 @@
 ---
-title: "[Node.js] Koa Server basic initialization with formatter"
+title: "[Node.js] Basic Koa Server initialization with formatter"
 date: 2021-12-10 08:00:00 -0400
 categories: js node.js koa server template
 ---
