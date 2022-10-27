@@ -148,18 +148,18 @@ footer:
 # Reading Files
 include:
   - .htaccess
-  - _pages
-  - _pages/aws
-  - _pages/js
-  - _pages/python
-  - _pages/react
-  - _pages/jquery
-  - _pages/web
-  - _pages/algorithm
-  - _pages/spring
-  - _pages/security
-  - _pages/node.js
-  - _pages/cs50
+  - _posts
+  - _posts/aws
+  - _posts/js
+  - _posts/python
+  - _posts/react
+  - _posts/jquery
+  - _posts/web
+  - _posts/algorithm
+  - _posts/spring
+  - _posts/security
+  - _posts/node.js
+  - _posts/cs50
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
