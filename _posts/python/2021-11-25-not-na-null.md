@@ -1,5 +1,5 @@
 ---
-title: "[Python] Check Null or "N/A" or empty String
+title: "[Python] Check Null or N/A or empty String"
 date: 2021-11-25 08:00:00 -0400
 categories: python string check null
 ---
