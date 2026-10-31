@@ -1,0 +1,70 @@
+name: Daily Byte
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # 매일 22:00 UTC = 다음 날 07:00 KST (GitHub 사정으로 수십 분 늦을 수 있음)
+  workflow_dispatch:        # Actions 탭에서 수동 실행
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-byte
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      TZ: Asia/Seoul
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 오늘 날짜(KST)와 발행 여부 확인
+        id: check
+        run: |
+          TODAY=$(date +%F)
+          echo "TODAY=$TODAY" >> "$GITHUB_ENV"
+          if [ -f "daily/issues/$TODAY.html" ]; then
+            echo "이미 발행됨: $TODAY"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Claude로 새 호 작성
+        if: steps.check.outputs.skip != 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          github_token: ${{ github.token }}   # Claude GitHub 앱 설치 없이 기본 토큰 사용 (Claude는 GitHub 작업을 하지 않음)
+          prompt: |
+            daily/CLAUDE.md 절차에 따라 ${{ env.TODAY }}자 데일리 바이트를 작성해 줘.
+            이 실행 환경에서의 예외:
+            - 작업 폴더는 저장소 루트다. CLAUDE.md의 경로는 모두 daily/ 기준으로 읽는다(예: daily/issues/, daily/template/issue.html).
+            - 오늘 날짜는 ${{ env.TODAY }}(KST)다.
+            - 2단계의 git pull, 6단계의 build_index.py 실행, 8단계의 커밋·푸시는 하지 않는다. 워크플로가 처리한다.
+            - 결과물은 daily/issues/${{ env.TODAY }}.html 파일 하나만 만든다. 다른 파일은 고치지 않는다.
+          claude_args: >-
+            --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep"
+            --max-turns 80
+
+      - name: 검증, 인덱스 갱신, 커밋, 푸시
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          F="daily/issues/$TODAY.html"
+          test -f "$F" || { echo "::error::$F 가 만들어지지 않았습니다"; exit 1; }
+          if grep -q '{{' "$F"; then echo "::error::채워지지 않은 {{ }} 가 남아 있습니다"; exit 1; fi
+          [ "$(grep -c '<h2 id="headline">' "$F")" = "1" ] || { echo "::error::headline h2 가 정확히 1개가 아닙니다"; exit 1; }
+          python3 daily/build_index.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily/issues daily/index.html
+          git commit -m "Issue $TODAY"
+          git push
+          # GITHUB_TOKEN 푸시가 Pages 빌드를 깨우지 않는 경우를 대비해 빌드를 직접 요청
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+          echo "발행: https://singularity-code.github.io/daily/issues/$TODAY.html"
