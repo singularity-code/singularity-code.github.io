@@ -1,9 +1,12 @@
 name: Daily Byte
 
 on:
+  # 목표: 매일 시드니 현지 06:00. GitHub cron은 UTC만 지원하고 서머타임을 모르므로
+  # 두 시각을 걸어 두고, 아래 'Sydney 06시 확인' 단계에서 맞는 쪽 하나만 진행한다.
   schedule:
-    - cron: "0 22 * * *"   # 매일 22:00 UTC = 다음 날 07:00 KST (GitHub 사정으로 수십 분 늦을 수 있음)
-  workflow_dispatch:        # Actions 탭에서 수동 실행
+    - cron: "0 20 * * *"   # 20:00 UTC = 06:00 AEST (UTC+10, 4~10월)
+    - cron: "0 19 * * *"   # 19:00 UTC = 06:00 AEDT (UTC+11, 10~4월 서머타임)
+  workflow_dispatch:        # Actions 탭에서 수동 실행 (시각 확인 없이 바로 진행)
 
 permissions:
   contents: write
@@ -21,20 +24,33 @@ jobs:
     env:
       TZ: Asia/Seoul
     steps:
+      - name: Sydney 06시 확인 (서머타임에 맞는 cron 하나만 통과)
+        id: gate
+        if: github.event_name == 'schedule'
+        run: |
+          OFFSET=$(TZ=Australia/Sydney date +%z)   # +1000 또는 +1100
+          case "${{ github.event.schedule }}/$OFFSET" in
+            "0 20 * * */+1000"|"0 19 * * */+1100") echo "run=true" >> "$GITHUB_OUTPUT" ;;
+            *) echo "이번 cron은 현재 시드니 오프셋($OFFSET)과 맞지 않아 건너뜀" ;;
+          esac
+
       - uses: actions/checkout@v4
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
 
       - name: 오늘 날짜(KST)와 발행 여부 확인
         id: check
+        if: github.event_name != 'schedule' || steps.gate.outputs.run == 'true'
         run: |
           TODAY=$(date +%F)
           echo "TODAY=$TODAY" >> "$GITHUB_ENV"
           if [ -f "daily/issues/$TODAY.html" ]; then
             echo "이미 발행됨: $TODAY"
-            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "go=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Claude로 새 호 작성
-        if: steps.check.outputs.skip != 'true'
+        if: steps.check.outputs.go == 'true'
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -48,10 +64,12 @@ jobs:
             - 결과물은 daily/issues/${{ env.TODAY }}.html 파일 하나만 만든다. 다른 파일은 고치지 않는다.
           claude_args: >-
             --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep"
+            --model sonnet
+            --effort medium
             --max-turns 80
 
       - name: 검증, 인덱스 갱신, 커밋, 푸시
-        if: steps.check.outputs.skip != 'true'
+        if: steps.check.outputs.go == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
