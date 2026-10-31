@@ -16,10 +16,12 @@
 
 ## Claude Cowork 예약 작업 등록
 
+> 현재는 GitHub Actions(`.github/workflows/daily-byte.yml`)가 매일 시드니 시간 06:00에 발행한다. Cowork 예약을 함께 켜지 않는다.
+
 Claude Desktop의 Cowork 탭에서 사이드바의 **Scheduled**를 열고 **New task**를 눌러 만든다. 또는 Cowork 작업 안에서 `/schedule`을 입력해 대화로 만들 수도 있다.
 
 - 이름: 데일리 바이트 발행
-- 빈도: 매일, 한국 시간 오전 7시(원하는 시각)
+- 빈도: 매일, 시드니 시간 오전 6시(원하는 시각)
 - 작업 폴더: 로컬 저장소의 **`daily/` 폴더**
 - 프롬프트:
   ```
