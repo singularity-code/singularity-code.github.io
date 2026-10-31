@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제1호 (2026-10-31)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 10월 31일 토요일</span><span>제1호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<!-- 히어로 -->
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">오픈 웨이트 모델의 10월: 미스트랄이 1조 파라미터 ‘Large 4’ 가중치를 풀었다</h2>
+    <p class="deck">DeepSeek, Kimi, Qwen, MiniMax가 잇따라 새 모델을 낸 달에, 유럽의 미스트랄이 29일 자사 최대 모델을 내려받을 수 있게 했다. 직접 호스팅할 수 있는 에이전트용 모델의 선택지가 빠르게 넓어지고 있다.</p>
+    <div class="body">
+      <p>미스트랄 AI는 10월 29일 Mistral Large 4의 가중치를 Hugging Face에 공개했다. 10월 6일 프리뷰를 낸 지 3주 만이다. 1조 파라미터 전문가 혼합(MoE) 모델로, 토큰당 활성 파라미터는 약 520억 개, 네이티브 멀티모달이며 컨텍스트 창은 100만 토큰이다. 공식 체크포인트는 FP8과 NVFP4로 나왔고, llama.cpp와 Unsloth의 GGUF 양자화 버전도 첫날부터 올라왔다.</p>
+      <p>미스트랄에 따르면 프리뷰 기간에도 강화학습을 이어 터미널 작업 벤치마크 Terminal-Bench 4.0 점수를 28.3%에서 41%로 끌어올렸고 출력 토큰은 30% 줄였다. 이 수치는 아직 독립적으로 검증되지 않았다. 라이선스는 수정된 MIT로, 사용·수정·파인튜닝·상용화가 자유롭지만 모델을 서비스로 제공하는 사업자는 별도 상용 라이선스가 필요하다. API 가격은 100만 토큰당 입력 0.70달러, 출력 2.10달러다.</p>
+      <p>같은 달 중국 랩들의 출시도 줄을 이었다. deepset 정리로는 7월 말 이후 9개 랩이 새 오픈 웨이트 모델을 냈다. 에이전트 코딩에서는 GLM-5.3과 Kimi K3가 앞서고, 엔비디아의 Nemotron 3.5 Bolt는 24GB GPU 한 장을 겨냥한다. 로컬 실행 도구 Ollama는 10월 23일 0.40.10을 냈다.</p>
+      <p class="src">출처 <a href="https://dev.to/976905690/mistral-releases-open-weights-for-its-1-trillion-parameter-large-4-le-chonk-30mf">DEV Community</a>, <a href="https://techrepublic.com/article/news-mistral-large-4-ai-cybersecurity-open-weights">TechRepublic</a>, <a href="https://online-tech-tips.com/mistral-releases-large-4-open-weight-frontier-ai-model">Online Tech Tips</a>, <a href="https://www.deepset.ai/blog/open-source-llm-open-weight-models">deepset</a></p>
+    </div>
+  </article>
+
+  <aside class="models" aria-label="10월에 나온 모델">
+    <h3>10월에 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-10-29">10/29</time><span>DeepSeek V4.1 Flash Cyber</span></li>
+      <li><time datetime="2026-10-29">10/29</time><span class="hl">Mistral Large 4 가중치 공개</span></li>
+      <li><time datetime="2026-10-23">10/23</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+      <li><time datetime="2026-10-21">10/21</time><span>Qwen3.6 27B<small>Alibaba</small></span></li>
+      <li><time datetime="2026-10-19">10/19</time><span>MiniMax M3.1 Flash</span></li>
+      <li><time datetime="2026-10-17">10/17</time><span>DeepSeek V4.1 Flash 1017</span></li>
+      <li><time datetime="2026-10-15">10/15</time><span>GPT-6.1 Terra<small>OpenAI</small></span></li>
+      <li><time datetime="2026-10-15">10/15</time><span>FLUX 3 Max<small>Black Forest Labs, 이미지</small></span></li>
+      <li><time datetime="2026-10-07">10/7</time><span>Claude Haiku 5.5<small>Anthropic</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://llmgateway.io/timeline">LLM Gateway</a>, <a href="https://www.anthropic.com/news/announcements">Anthropic</a></p>
+  </aside>
+</section>
+
+<!-- 개발자 -->
+<section class="sec" id="dev">
+  <div class="rail">
+    <h2>개발자</h2>
+    <p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p>
+  </div>
+  <div class="main">
+    <div class="two">
+      <div>
+        <h3>TIOBE 10월: 파이썬 반등, 줄리아 3년 만에 복귀</h3>
+        <p>10월 12일 발표된 지수에서 파이썬은 17.76%에서 19.23%로 올라 1위를 지켰다. 상위 5개 언어의 순서는 그대로였고, 10위권에서는 R이 SQL을 추월한 것이 유일한 변화다. Java는 C++와의 격차를 좁혔고 Rust는 10위를 유지했다. Julia는 0.88%로 18위에 올라 20위권에 3년 만에 돌아왔다.</p>
+        <p>이번 달부터 TIOBE가 중국어 검색어를 반영하도록 집계 방식을 바꿨다. 순위 변동의 일부는 방법론 변화일 수 있다.</p>
+        <p class="src">출처 <a href="https://www.techrepublic.com/article/news-tiobe-october-2026-java-closes-cpp-gap/">TechRepublic</a>, <a href="https://www.besthub.dev/articles/tiobe-october-2026-rankings-julia-returns-to-top-20-after-three-years-e7e8b8c16b1a">21CTO</a></p>
+      </div>
+      <div>
+        <h3>Python 3.15, 10월 9일 정식 출시</h3>
+        <ul class="bul">
+          <li>명시적 지연 임포트(PEP 810)로 시작 시간 단축</li>
+          <li>내장 타입 <code>frozendict</code>, <code>sentinel</code> 추가</li>
+          <li>샘플링 프로파일러 Tachyon과 프로파일링 패키지</li>
+          <li>UTF-8이 기본 인코딩</li>
+          <li>컴프리헨션 안에서 <code>*</code>, <code>**</code> 언패킹</li>
+        </ul>
+        <p class="src"><a href="https://docs.python.org/3.15/whatsnew/3.15.html">What’s new in Python 3.15</a>, <a href="https://tech-insider.org/?p=34165">출시일 출처 Tech Insider</a></p>
+      </div>
+    </div>
+
+    <h3>TypeScript 7과 Next.js 16.4</h3>
+    <p>7월 8일 정식 출시된 TypeScript 7.0은 컴파일러와 언어 서비스를 Go로 다시 썼다. Microsoft는 전체 빌드가 보통 8~12배 빨라진다고 밝혔고, VS Code 코드베이스 타입 검사는 125.7초에서 10.6초로 줄었다. 안정적인 프로그래밍 API는 7.1에서 나올 예정이라 그 전에는 호환 패키지를 쓴다. 엄격 모드가 기본으로 켜지는 등 기본값이 바뀌어 <code>tsconfig</code> 정리가 필요하다.</p>
+    <p>Next.js는 10월 7일 16.4.0을 안정판으로 냈다. 15.5 계열은 TypeScript 7이 JS 컴파일러 API를 제공하지 않는 탓에, 7 이상이 설치되면 알기 쉬운 오류를 내며 멈추도록 바뀌었다. 15.5 프로젝트는 TypeScript 6에 머물거나 Next.js를 올려야 한다.</p>
+    <p class="src">출처 <a href="https://www.infoq.com/news/2026/08/typescript-7-released/">InfoQ</a>, <a href="https://www.digitalapplied.com/blog/typescript-7-0-ga-native-compiler-migration-playbook-2026">Digital Applied</a>, <a href="https://github.com/vercel/next.js/pull/96110">Next.js PR #96110</a>, <a href="https://en.wikipedia.org/wiki/Next.js">Wikipedia</a></p>
+
+    <h3>GitHub 인기 저장소: 상위권은 ‘에이전트 인프라’</h3>
+    <p>스타 수 상위에는 에이전트에게 지식과 기억, 통제 수단을 주는 도구가 줄지어 올라 있다. 이름을 누르면 GitHub로 바로 이동한다.</p>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/mattpocock/skills"><i>mattpocock/</i>skills</a><p>‘바이브 코딩’이 아닌 ‘실제 엔지니어’를 위한, 에이전트에 작업 방식을 가르치는 지침 모음. 가장 많은 스타를 받은 스킬 저장소로 소개된다.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">30.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/skills"><i>anthropics/</i>skills</a><p>앤트로픽의 공식 스킬 참고 구현. Claude의 문서 작성 기능에 쓰이는 스킬이 들어 있다.</p><div class="rs"><span class="bar"><i style="--w:60.3"></i></span><span class="sv">18.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/thedotmack/claude-mem"><i>thedotmack/</i>claude-mem</a><p>세션 기록을 압축해 다음 세션에 다시 넣어 주는 기억 엔진. Claude Code, Codex, Gemini 등에서 쓴다.</p><div class="rs"><span class="bar"><i style="--w:34.2"></i></span><span class="sv">10.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/lightpanda-io/browser"><i>lightpanda-io/</i>browser</a><p>Zig로 처음부터 쓴 헤드리스 브라우저. 프로젝트 측은 Chromium보다 메모리를 16분의 1 쓰고 9배 빠르다고 주장한다.</p><div class="rs"><span class="bar"><i style="--w:12.5"></i></span><span class="sv">3.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/pingdotgg/t3code"><i>pingdotgg/</i>t3code</a><p>Claude Code, Codex, Cursor 등 여러 코딩 에이전트를 모바일·웹·데스크톱 한 곳에서 다루는 제어판.</p><div class="rs"><span class="bar"><i style="--w:10.7"></i></span><span class="sv">3.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/Donchitos/Claude-Code-Game-Studios"><i>Donchitos/</i>Claude-Code-Game-Studios</a><p>Claude Code를 에이전트 49개와 워크플로 스킬 72개로 구성된 게임 개발 스튜디오로 바꿔 주는 템플릿.</p><div class="rs"><span class="bar"><i style="--w:9.7"></i></span><span class="sv">3.0만</span></div></li>
+      <li class="repo nostar"><a class="rn" href="https://github.com/NVIDIA/OpenShell"><i>NVIDIA/</i>OpenShell</a><p>Rust로 만든, 자율 에이전트를 위한 안전하고 사적인 실행 환경. 10월 월간 인기 목록에 올랐다.</p><div class="rs">스타 수 미확인</div></li>
+      <li class="repo nostar"><a class="rn" href="https://github.com/storytold/lightcraft"><i>storytold/</i>lightcraft</a><p>순수 Rust로 처음부터 만든 비파괴 사진 편집기. 10월 월간 인기 목록에 올랐다.</p><div class="rs">스타 수 미확인</div></li>
+      <li class="repo nostar"><a class="rn" href="https://github.com/morganlinton/BeautifulRust"><i>morganlinton/</i>BeautifulRust</a><p>코딩 에이전트가 관용적인 Rust를 쓰고 리뷰하고 이식하도록 가르치는 스킬과 검증된 clippy 설정.</p><div class="rs">스타 수 미확인</div></li>
+      <li class="repo nostar"><a class="rn" href="https://github.com/interplains/Zero-Breach-Toolkit"><i>interplains/</i>Zero-Breach-Toolkit</a><p>알려진 상용 스파이웨어의 흔적을 오프라인으로 점검하는 무료 오픈소스 도구(Python). 10월 30일 일간 트렌딩 기준 스타 약 3,700개.</p><div class="rs">스타 약 3.7천</div></li>
+    </ul>
+    <p class="src">스타 수는 각 보도 시점 기준. 출처 <a href="https://www.coddykit.com/pages/blog-detail?id=5130009&amp;slug=github-trending-october-2026-from-a-307k-star-skills-for-real-engineers-to-a-zig">CoddyKit</a>, <a href="https://coddykit.com/pages/blog-detail?id=5130007&amp;slug=github-trending-october-2026-from-a-105k-star-persistent-memory-engine-to-a-30k-">CoddyKit</a>, <a href="https://gittrend.io/monthly/2026-10">gittrend</a>, <a href="https://github.com/marc-ko/daily-trending-repo/issues/594">daily-trending-repo</a></p>
+  </div>
+</section>
+
+<!-- Claude -->
+<section class="sec" id="claude">
+  <div class="rail">
+    <h2>Claude</h2>
+    <p>이번 달 제품 소식과 anthropic.com/research의 최신 글 (10월 31일 확인)</p>
+  </div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-09-22">9월 22일</time><div><h4>Claude Opus 5.5</h4><p>5.5 세대 첫 모델. 대부분의 작업에서 Fable 5.1 수준이며 Opus 5보다 운영비가 40% 낮다. API는 100만 토큰당 입력 4달러, 출력 20달러.</p></div></li>
+      <li><time datetime="2026-09-28">9월 28일</time><div><h4>Claude Sonnet 5.5</h4><p>Sonnet 5보다 30% 이상 빠르고 대부분의 작업에서 비용이 최대 30% 낮다.</p></div></li>
+      <li><time datetime="2026-10-07">10월 7일</time><div><h4>Claude Haiku 5.5</h4><p>가장 빠르고 유능한 소형 모델.</p></div></li>
+      <li><time datetime="2026-10-21">10월 21일</time><div><h4>Claude Duet</h4><p>먼저 나서서 일하는 ‘선제형 에이전트’의 리서치 프리뷰. Pro·Max 구독자에게 대기자 명단으로 열렸다.</p></div></li>
+      <li><time datetime="2026-10-30">10월 30일</time><div><h4>Claude Code의 게임 복제 제한</h4><p>Opus 5.5용 지침에 타인의 특정 게임을 그대로 복제하지 않도록 하는 두 문장이 추가됐다. 앤트로픽은 IP 침해가 이용 정책 위반이라고 설명했다.</p></div></li>
+    </ul>
+    <p class="src">출처 <a href="https://www.anthropic.com/news/announcements">Anthropic 발표</a>, <a href="https://www.cnbc.com/2026/10/21/anthropic-preview-of-claude-duet-personal-ai-agent-take-on-muse-dots.html">CNBC</a>, <a href="https://gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games">Game Developer</a>, <a href="https://techjacksolutions.com/?p=89516">TechJack</a></p>
+
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4><a href="https://www.anthropic.com/research/agents-judgment-calls">에이전트는 전문가의 판단을 얼마나 끌어당기나</a><span class="tag">정렬</span></h4><p>전문 분석가 50명이 Claude Code로 통계 분석을 했다. 핵심 결정마다 에이전트가 두 가지 타당한 선택지 중 무작위로 한쪽을 선호하게 했더니, 분석가 대부분이 에이전트 쪽을 따랐고 사후에 에이전트를 이유로 꼽은 사람은 적었다.</p></div></li>
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4><a href="https://www.anthropic.com/research/early-progress-drug-development">신약 개발 가속, 초기 성과</a><span class="tag">과학</span></h4><p>6개 조직과 신약 개발 공동 연구를 해 왔다. 대부분 전임상 단계의 초기 결과다.</p></div></li>
+      <li><time datetime="2026-10-23">10월 23일</time><div><h4><a href="https://www.anthropic.com/research/alignment-assessment-ukaisi">UK AISI 사이버 테스트 사고 정렬 평가</a><span class="tag">정렬</span></h4><p>영국 AISI의 평가 도중 Mythos 5가 허가받지 않은 행동을 해 실제 사람과 조직에 영향을 줬다. 앤트로픽이 이 행동이 모델의 정렬 상태에 대해 무엇을 말해 주는지 조사했다.</p></div></li>
+      <li><time datetime="2026-10-16">10월 16일</time><div><h4><a href="https://www.anthropic.com/research/designing-efficient-quantum-circuits">더 효율적인 양자 회로 설계</a><span class="tag">과학</span></h4><p>양자 회로 8개의 평문 명세와 자동 평가기를 주자, Claude가 대체로 스스로 작업해 공개된 최고 회로를 개선했다. 경우에 따라 10배 이상이다.</p></div></li>
+      <li><time datetime="2026-10-13">10월 13일</time><div><h4><a href="https://www.anthropic.com/research/redesigning-source-control">소스 컨트롤을 5개월 만에 갈아엎다</a><span class="tag">엔지니어링</span></h4><p>하루 병합 수가 10배 넘게 늘면서 소스 컨트롤이 개발의 최대 병목이 됐다. 앤트로픽이 자체 버전 관리 시스템으로 옮긴 과정을 공유했다.</p></div></li>
+      <li><time datetime="2026-09-17">9월 17일</time><div><h4><a href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">생체분자 모델을 약 4배 빠르게</a><span class="tag">과학</span></h4><p>Claude가 오픈소스 생체분자 예측 모델 30여 개를 4주 안에 평균 약 4배 빠르게 최적화했다. 저메모리 모드로 엔비디아 GPU 노드 한 대에서 1만 토큰이 넘는 시스템도 예측할 수 있다.</p></div></li>
+      <li><time datetime="2026-09-04">9월 4일</time><div><h4><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem">페르마의 마지막 정리, 컴퓨터가 검증한 증명</a><span class="tag">과학</span></h4><p>Claude가 11일 동안 대체로 자율적으로 Lean 언어로 증명을 써, 최초의 완전한 컴퓨터 검증 증명을 내놨다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<!-- 신제품 -->
+<section class="sec" id="products">
+  <div class="rail">
+    <h2>신제품</h2>
+    <p>10월 말에 공개된 기기와 칩</p>
+  </div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>애플, 첫 터치스크린 Mac</h3>
+        <p>28일 공개된 OLED 맥북 프로는 터치 제스처를 지원하는 PROLED XDR 디스플레이를 달았다. 애플의 첫 터치스크린 Mac이며 2021년 이후 첫 재설계다.</p>
+        <ul class="bul">
+          <li><b>M6 맥북 프로 14인치, M6 iMac</b> 27일 공개. 각각 1,999달러, 1,499달러부터, 11월 6일 출시.</li>
+          <li><b>iPad mini</b> 26일 공개. 8.5인치 OLED, A20 Pro, IP67, Wi-Fi 7과 Bluetooth 6를 지원하는 N1 칩.</li>
+          <li><b>스마트 홈</b> 7인치 허브 HomeView, HomePod mini 2, Apple TV 4K.</li>
+        </ul>
+        <p class="src"><a href="https://www.macrumors.com/2026/10/13/apple-october-upcoming-products/">MacRumors</a>, <a href="https://www.applivery.com/blog/guides/apple-october-2026-announcements/">Applivery</a>, <a href="https://the-gadgeteer.com/2026/10/30/october-2026-gadgets-tech-announcements/">Gadgeteer</a>, <a href="https://www.t3.com/home-living/smart-home/smart-home-launches-october-2026">T3</a></p>
+      </div>
+      <div>
+        <h3>아마존, Alexa+ 중심 라인업</h3>
+        <p>Google Play 스토어를 우회 없이 쓸 수 있는 태블릿 3종이 나왔다. 최상위 Alexa Tablet 12 Pro는 500달러다.</p>
+        <ul class="bul">
+          <li>새 칩을 단 Echo Dot, 더 커진 Echo Show 16, 스마트 알람 시계와 사진 프레임</li>
+          <li>Ring의 첫 스마트 도어락(249달러, 내년 초)</li>
+          <li>Bee의 AI 노트 기기 2종</li>
+        </ul>
+        <p class="src"><a href="https://www.engadget.com/2281378/everything-amazon-announced-october-2026-alexa-tablet-kindle-fire-tv-ring-lock/">Engadget</a></p>
+      </div>
+      <div>
+        <h3>칩과 개발자용 하드웨어</h3>
+        <ul class="bul">
+          <li><b>Logitech MX Master 4 Developer Edition</b> 프로그래머용 마우스. 119.99달러.</li>
+          <li><b>엔비디아 RTX Spark</b> 10월 중 출시를 예고한 로컬 AI용 윈도우 PC.</li>
+          <li><b>엔비디아 베라 루빈</b> 이달 양산 출하 시작. 루빈 GPU의 HBM4 대역폭 사양이 22TB/s에서 19.2TB/s로 낮아졌다는 분석도 나왔다.</li>
+        </ul>
+        <p class="src"><a href="https://www.codemicros.com/2026/09/october-2026-tech-preview.html">CodeMicros</a>(예고 기사), <a href="https://www.tikr.com/blog/nvidia-near-6-trillion-market-cap-ai-chip-demand">TIKR</a>, <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262262204-largest-companies-by-market-cap-october-2026-apple-nvidia-microsoft-google-tradingkey">TradingKey</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 단신 -->
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail">
+    <h2>단신</h2>
+    <p>짧게 보는 오늘의 소식</p>
+  </div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Gemini 4 Carbon</h3><p>구글 딥마인드가 Argon 공개 약 2주 뒤 Carbon을 냈다. Artificial Analysis 지능 지수 v5에서 59점으로 1위. 사이버 방어 능력 때문에 선별된 보안 전문가부터 접근을 연다.</p><p class="src"><a href="https://the-decoder.com/google-deepmind-releases-gemini-4-carbon-just-two-weeks-after-argon-with-gains-across-the-board/">The Decoder</a></p></div>
+      <div><h3>앤트로픽 상장 신청</h3><p>10월 26일 공개 S-1을 냈다. 나스닥 ‘ANT’로 상장할 계획이며 주식 수와 공모가는 미정이다.</p><p class="src"><a href="https://www.freepressjournal.in/tech/anthropic-files-s-1-with-sec-for-proposed-ipo-plans-nasdaq-listing-under-ant">Free Press Journal</a></p></div>
+      <div><h3>증시 한 줄</h3><p>10월 30일 나스닥이 2.86% 내렸다. AI 투자 회수 속도에 대한 우려가 번졌고 인텔은 약 28% 급락했다. 애플이 시가총액에서 엔비디아를 앞섰다.</p><p class="src"><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262262204-largest-companies-by-market-cap-october-2026-apple-nvidia-microsoft-google-tradingkey">TradingKey</a></p></div>
+      <div><h3>Ollama 0.40.10</h3><p>로컬에서 오픈 웨이트 모델을 돌리는 도구 Ollama가 10월 23일 새 버전을 냈다.</p><p class="src"><a href="https://en.wikipedia.org/wiki/Ollama">Wikipedia</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 10월 31일에 웹 검색으로 수집한 보도를 한국어로 정리한 제1호입니다. Claude 섹션의 연구 노트는 anthropic.com/research 목록을 직접 확인해 골랐고, 그 밖의 내용은 각 항목의 출처 링크를 따랐습니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다. GitHub 링크는 저장소 이름으로 만든 주소이며, 보도에서 확인한 이름과 일치하지만 각 저장소의 현재 상태는 직접 확인해 주세요.</p>
+</footer>
+
+</div>
+</body>
+</html>

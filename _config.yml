@@ -187,6 +187,10 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  - daily/CLAUDE.md # 데일리 바이트 작업 문서 (Liquid 오류 방지)
+  - daily/README.md
+  - daily/template
+  - daily/build_index.py
 keep_files:
   - .git
   - .svn

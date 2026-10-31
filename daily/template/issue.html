@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제{{호수}}호 ({{YYYY-MM-DD}})</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>{{2026년 10월 31일 토요일}}</span><span>제{{호수}}호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<!-- 1) 히어로: 오늘 가장 중요한 기술 기사 1건 + 오른쪽 최근 모델 목록 -->
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">{{오늘의 톱 헤드라인}}</h2>
+    <p class="deck">{{두 문장 이내의 요약}}</p>
+    <div class="body">
+      <p>{{본문 문단 3개 안팎. 출처에 없는 내용은 쓰지 않는다}}</p>
+      <p class="src">출처 <a href="{{URL}}">{{매체명}}</a>, <a href="{{URL}}">{{매체명}}</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="{{YYYY-MM-DD}}">{{M/D}}</time><span>{{모델명}}<small>{{개발사}}</small></span></li>
+      <!-- 가장 중요한 항목에는 <span class="hl"> 사용, 6~9개 -->
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="{{URL}}">{{매체명}}</a></p>
+  </aside>
+</section>
+
+<!-- 2) 개발자: 언어·릴리스(.two), 프레임워크/도구 본문, GitHub 목록(.repos) -->
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>{{언어·순위 소식}}</h3><p>{{본문}}</p><p class="src">출처 <a href="{{URL}}">{{매체명}}</a></p></div>
+      <div><h3>{{새 릴리스}}</h3><ul class="bul"><li>{{항목}} <code>{{코드}}</code></li></ul><p class="src"><a href="{{URL}}">{{공식 문서}}</a></p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <!-- 스타 수를 확인한 저장소: 막대 폭 --w 는 (스타/최대 스타)*100, 표기는 '30.8만' 또는 '1.2k' -->
+      <li class="repo"><a class="rn" href="https://github.com/{{소유자}}/{{저장소}}"><i>{{소유자}}/</i>{{저장소}}</a><p>{{한 줄 설명}}</p><div class="rs"><span class="bar"><i style="--w:{{0-100}}"></i></span><span class="sv">{{스타}}</span></div></li>
+      <!-- 스타 수를 확인하지 못한 저장소 -->
+      <li class="repo nostar"><a class="rn" href="https://github.com/{{소유자}}/{{저장소}}"><i>{{소유자}}/</i>{{저장소}}</a><p>{{한 줄 설명}}</p><div class="rs">스타 수 미확인</div></li>
+    </ul>
+    <p class="src">스타 수는 보도 시점 기준. 출처 <a href="{{URL}}">{{매체명}}</a></p>
+  </div>
+</section>
+
+<!-- 3) Claude: 제품 소식(.rows) + 연구 노트(.rows). 연구 노트는 anthropic.com/research 목록에서 직접 고른다 -->
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 ({{확인한 날짜}} 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="{{YYYY-MM-DD}}">{{M월 D일}}</time><div><h4>{{제목}}</h4><p>{{설명}}</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="{{YYYY-MM-DD}}">{{M월 D일}}</time><div><h4><a href="https://www.anthropic.com/research/{{슬러그}}">{{제목}}</a><span class="tag">{{정렬|과학|엔지니어링|해석가능성|경제}}</span></h4><p>{{요약}}</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<!-- 4) 신제품: 2~3칸 -->
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>{{회사·제품}}</h3><p>{{설명}}</p><ul class="bul"><li><b>{{제품}}</b> {{설명}}</li></ul><p class="src"><a href="{{URL}}">{{매체명}}</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5) 단신: 3~4칸. 증시·투자 소식은 최대 1칸 -->
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>{{제목}}</h3><p>{{두세 문장}}</p><p class="src"><a href="{{URL}}">{{매체명}}</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 {{YYYY년 M월 D일}}에 웹 검색으로 수집한 보도를 한국어로 정리한 제{{호수}}호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
