@@ -23,7 +23,7 @@ def main() -> None:
     for no, p in enumerate(ISSUES, start=1):
         items.append((no, p.stem, headline(p)))
     items.reverse()  # 최신호가 위
-    latest_no, latest_date, _ = items[0]
+    latest_no, latest_date, latest_head = items[0]
 
     rows = "\n".join(
         f'      <li><time datetime="{d}">{d}<small>제{no}호</small></time>'
@@ -47,9 +47,11 @@ def main() -> None:
     </div>
   </header>
   <section class="archive-hero">
-    <h1>매일 아침 만드는 IT·AI 브리핑</h1>
-    <p>갓 구운 크로아상처럼, 매일 아침 따끈한 소식을 한 겹 한 겹 정성껏 구워 내놓습니다.</p>
-    <a class="btn" href="issues/{latest_date}.html" target="_self">최신호 보기 (제{latest_no}호, {latest_date})</a>
+    <a class="latest" href="issues/{latest_date}.html" target="_self">
+      <span class="latest-meta"><b>최신호</b>제{latest_no}호 · {latest_date}</span>
+      <span class="latest-title">{latest_head}</span>
+      <span class="latest-go">읽으러 가기 <i aria-hidden="true">→</i></span>
+    </a>
   </section>
   <section style="padding:40px 0">
     <ul class="issue-list">
