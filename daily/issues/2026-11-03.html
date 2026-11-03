@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제4호 (2026-11-03)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 3일 화요일</span><span>제4호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">앤트로픽, Agent Skills 표준을 Linux Foundation 산하 Agentic AI Foundation에 기부</h2>
+    <p class="deck">에이전트에 전문 지식과 작업 절차를 주는 오픈 표준 Agent Skills의 관리가 앤트로픽에서 재단으로 넘어간다. 10월 22일 발표이며, 이전 호에서는 다루지 않았다.</p>
+    <div class="body">
+      <p>앤트로픽에 따르면 스킬은 SKILL.md 파일과 보조 스크립트·참고 자료를 담은 폴더로, Claude Code를 만들며 나온 개념이다. 2025년 10월 선보였고 12월에 오픈 표준으로 공개했다. 이번에 표준 자체와 이름·로고, GitHub 조직, agentskills.io 도메인이 재단으로 이전된다.</p>
+      <p>앤트로픽은 ChatGPT, Cursor, GitHub Copilot, VS Code 등 70개 넘는 에이전트 플랫폼이 도입했고 공개 스킬이 100만 개, 설치가 약 2억 8천만 건이라고 밝혔다. 이 수치는 앤트로픽 자체 집계이며 독립 검증은 확인하지 못했다. 유지보수는 앤트로픽·Google·OpenAI 등의 엔지니어가 개인 자격으로 맡고, 버전 릴리스·제안 절차·보안 지침을 담은 로드맵은 제안 단계다. 이전 시점은 글에 명시되지 않았다.</p>
+      <p>이번 조사에서 어제 이후 새로 공개된 주요 모델은 확인하지 못했다. 오른쪽 목록은 출시 추적 사이트의 최신 항목이다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Anthropic</a></p>
+    </div>
+  </article>
+
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-10-29">10/29</time><span class="hl">DeepSeek V4.1 Flash Cyber<small>DeepSeek</small></span></li>
+      <li><time datetime="2026-10-23">10/23</time><span>Kimi K3.1 Pro Highspeed<small>Moonshot AI</small></span></li>
+      <li><time datetime="2026-10-23">10/23</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+      <li><time datetime="2026-10-21">10/21</time><span>Qwen3.6 27B<small>Alibaba</small></span></li>
+      <li><time datetime="2026-10-19">10/19</time><span>MiniMax M3.1 Flash<small>MiniMax</small></span></li>
+      <li><time datetime="2026-10-17">10/17</time><span>DeepSeek V4.1 Flash 1017<small>DeepSeek</small></span></li>
+      <li><time datetime="2026-10-15">10/15</time><span>FLUX 3 Max<small>Black Forest Labs</small></span></li>
+      <li><time datetime="2026-10-15">10/15</time><span>GPT-6.1 Terra<small>OpenAI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://llmgateway.io/timeline">LLM Gateway</a></p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <p>새 언어 순위(TIOBE)와 주요 런타임 릴리스는 이번 조사에서 새 발표를 확인하지 못해 생략한다. 아래는 GitHub 트렌딩 페이지(일간)의 목록과 스타 수다.</p>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/thedotmack/claude-mem"><i>thedotmack/</i>claude-mem</a><p>에이전트 세션 활동을 압축해 이후 세션에 맥락으로 다시 넣어 주는 도구.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">11.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/D4Vinci/Scrapling"><i>D4Vinci/</i>Scrapling</a><p>단일 요청부터 대규모 크롤링까지 다루는 웹 스크래핑 프레임워크.</p><div class="rs"><span class="bar"><i style="--w:83.9"></i></span><span class="sv">9.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/JustVugg/colibri"><i>JustVugg/</i>colibri</a><p>대형 MoE 모델의 전문가(expert)를 디스크에서 스트리밍해 일반 PC에서 돌리는 순수 C 엔진.</p><div class="rs"><span class="bar"><i style="--w:42.0"></i></span><span class="sv">4.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/shiyu-coder/Kronos"><i>shiyu-coder/</i>Kronos</a><p>금융 시장 데이터를 다루는 파운데이션 모델.</p><div class="rs"><span class="bar"><i style="--w:41.5"></i></span><span class="sv">4.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/pingdotgg/t3code"><i>pingdotgg/</i>t3code</a><p>트렌딩 페이지에 설명이 없어 용도는 미확인.</p><div class="rs"><span class="bar"><i style="--w:37.9"></i></span><span class="sv">4.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/hyprwm/Hyprland"><i>hyprwm/</i>Hyprland</a><p>Wayland용 커스터마이즈 가능한 동적 타일링 컴포지터.</p><div class="rs"><span class="bar"><i style="--w:36.1"></i></span><span class="sv">4.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/Donchitos/Claude-Code-Game-Studios"><i>Donchitos/</i>Claude-Code-Game-Studios</a><p>Claude Code에 게임 스튜디오식 구조(에이전트 49개, 워크플로 스킬 72개)를 더하는 템플릿.</p><div class="rs"><span class="bar"><i style="--w:30.3"></i></span><span class="sv">3.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/FlashML-org/FreeToken"><i>FlashML-org/</i>FreeToken</a><p>대형 모델을 데스크톱에서 데이터센터식 서빙으로 로컬 실행하는 도구.</p><div class="rs"><span class="bar"><i style="--w:14.5"></i></span><span class="sv">1.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-desktop"><i>vercel-labs/</i>agent-desktop</a><p>AI 에이전트용 컴퓨터 사용(computer-use) 명령줄 도구.</p><div class="rs"><span class="bar"><i style="--w:8.8"></i></span><span class="sv">0.98만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지에서 본 시점의 값. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 3일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-10-28">10월 28일</time><div><h4>AI for Science, 재단·연구기관으로 확대</h4><p>연구자에게 Claude 크레딧을 무료로 주는 프로그램에 Sloan·Simons 재단, 미국 NSF 등 자금 제공 단체와 Wellcome Sanger Institute, Francis Crick Institute 등 연구기관이 참여한다. 크레딧 규모와 신청 방법은 글에 없다.</p></div></li>
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4>미 GSA와 파트너십 확대</h4><p>앤트로픽 발표에 따르면 정부 고객은 Claude Enterprise·Claude for Government·API를 40% 할인받고 최소 지출 약정은 없다. 절감액 약 10억 달러는 앤트로픽의 추정이다.</p></div></li>
+    </ul>
+    <p class="src">출처 <a href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic: AI for Science</a>, <a href="https://www.anthropic.com/news/expanding-partnership-gsa">Anthropic: GSA</a>, <a href="https://www.anthropic.com/news">뉴스 목록</a></p>
+
+    <h3>연구 노트</h3>
+    <p>연구 목록은 어제와 같고 최신 글은 10월 27일이다. 아직 다루지 않은 글을 고른다.</p>
+    <ul class="rows">
+      <li><time datetime="2026-10-16">10월 16일</time><div><h4><a href="https://www.anthropic.com/research/ai-expectations-gap">The AI expectations gap</a><span class="tag">경제</span></h4><p>목록에서 제목과 분류만 확인했고 세부 내용은 미확인.</p></div></li>
+      <li><time datetime="2026-10-13">10월 13일</time><div><h4><a href="https://www.anthropic.com/research/redesigning-source-control">Redesigning source control at Anthropic</a><span class="tag">엔지니어링</span></h4><p>목록에서 제목과 분류만 확인했고 세부 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>새 소식 없음</h3>
+        <p>이번 조사에서 새로 공개된 기기·칩·개발자 도구는 확인하지 못했다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>colibri, 일반 PC에서 대형 MoE 실행</h3><p>JustVugg/colibri는 대형 mixture-of-experts 모델의 전문가를 디스크에서 스트리밍해 소비자용 하드웨어에서 돌리는 C 엔진이라고 소개된다. 성능은 확인하지 못했다.</p><p class="src"><a href="https://github.com/trending?since=daily">GitHub Trending</a></p></div>
+      <div><h3>Claude Code 생태계 저장소 인기</h3><p>claude-mem과 Claude-Code-Game-Studios가 오늘도 트렌딩 상위에 있다. 모두 Claude Code 같은 코딩 에이전트에 맥락이나 구조를 더하는 도구다.</p><p class="src"><a href="https://github.com/trending?since=daily">GitHub Trending</a></p></div>
+      <div><h3>DeepSeek V4.1 Flash Cyber</h3><p>출시 추적 사이트가 10월 29일자로 기록한 DeepSeek의 최신 모델이다. 성능과 가중치 공개 여부는 여전히 미확인.</p><p class="src"><a href="https://llmgateway.io/timeline">LLM Gateway</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 3일에 웹 검색으로 수집한 보도를 한국어로 정리한 제4호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
