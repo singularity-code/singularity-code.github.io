@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제6호 (2026-11-05)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 5일 목요일</span><span>제6호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">앤트로픽, Claude로 원핵생물 vault 입자의 3D 구조를 처음 규명</h2>
+    <p class="deck">앤트로픽 생물학 팀이 모든 단계에 Claude를 써서 박테리오파지 단백질로 만든 원핵생물 vault 입자의 3D 구조를 처음 결정했다고 밝혔다. 생물학적 기능은 아직 모른다.</p>
+    <div class="body">
+      <p>11월 4일 연구 목록에 올라온 글에 따르면, 이번에 구조를 푼 것은 박테리오파지 단백질로 만든 vault 입자다. 설계된 껍질은 포유류의 vault보다 짧고 넓으며 더 큰 부피를 감싼다고 한다.</p>
+      <p>앤트로픽은 Claude 덕분에 작업이 빨라졌다고 설명한다. 며칠 걸리던 정제를 약 90분으로 줄였고, 첫 구조 모델은 약 34시간 만에 나왔다. 다만 이 수치는 앤트로픽 자체 보고이고 독립 검증은 확인하지 못했다.</p>
+      <p>오늘은 새로 공개된 모델 중 확실히 확인된 큰 소식이 없어, 어제 호 이후 새로 나온 연구 글을 톱으로 삼았다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Anthropic Research</a>, <a href="https://www.anthropic.com/research">연구 목록</a></p>
+    </div>
+  </article>
+
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-10-29">10/29</time><span>DeepSeek V4.1 Flash Cyber<small>DeepSeek (제3자 목록만 확인)</small></span></li>
+      <li><time datetime="2026-10-23">10/23</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+      <li><time datetime="2026-10-21">10/21</time><span>Qwen3.6 27B<small>Alibaba</small></span></li>
+      <li><time datetime="2026-10-19">10/19</time><span>MiniMax M3.1 Flash<small>MiniMax</small></span></li>
+      <li><time datetime="2026-10-17">10/17</time><span>DeepSeek V4.1 Flash 1017<small>DeepSeek</small></span></li>
+      <li><time datetime="2026-10-15">10/15</time><span>GPT-6.1 Terra<small>OpenAI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://llmgateway.io/timeline">LLM Gateway</a>. 가중치 공개 여부는 목록에 없어 미확인.</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <p>새 언어 순위와 주요 런타임 릴리스는 이번 조사에서 새 발표를 확인하지 못해 생략한다. 아래는 GitHub 트렌딩 페이지(일간)의 목록과 스타 수다. 어제와 겹치는 저장소가 많다.</p>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/mattpocock/skills"><i>mattpocock/</i>skills</a><p>저자가 개인 에이전트 디렉터리에서 쓰는 엔지니어링 스킬 모음.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">31.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/github/spec-kit"><i>github/</i>spec-kit</a><p>명세 중심 개발(SDD)을 위한 툴킷.</p><div class="rs"><span class="bar"><i style="--w:47"></i></span><span class="sv">14.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/garrytan/gstack"><i>garrytan/</i>gstack</a><p>CEO·디자이너·QA 등 역할별 Claude Code 도구 23개 묶음(TypeScript).</p><div class="rs"><span class="bar"><i style="--w:44.5"></i></span><span class="sv">13.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/harry0703/MoneyPrinterTurbo"><i>harry0703/</i>MoneyPrinterTurbo</a><p>주제나 키워드만으로 고화질 숏폼 영상을 만드는 자동화 파이프라인.</p><div class="rs"><span class="bar"><i style="--w:44.3"></i></span><span class="sv">13.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/thedotmack/claude-mem"><i>thedotmack/</i>claude-mem</a><p>에이전트 세션 활동을 압축해 이후 세션에 맥락으로 다시 넣어 주는 도구.</p><div class="rs"><span class="bar"><i style="--w:36"></i></span><span class="sv">11.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/floci-io/floci"><i>floci-io/</i>floci</a><p>무료 경량 AWS 로컬 에뮬레이터.</p><div class="rs"><span class="bar"><i style="--w:9.4"></i></span><span class="sv">3.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-desktop"><i>vercel-labs/</i>agent-desktop</a><p>AI 에이전트가 컴퓨터를 조작하게 하는 Rust 명령줄 도구.</p><div class="rs"><span class="bar"><i style="--w:4.8"></i></span><span class="sv">1.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/The-PR-Agent/pr-agent"><i>The-PR-Agent/</i>pr-agent</a><p>풀 리퀘스트를 자동으로 리뷰하는 오픈소스 AI 도구.</p><div class="rs"><span class="bar"><i style="--w:4.7"></i></span><span class="sv">1.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/max-sixty/worktrunk"><i>max-sixty/</i>worktrunk</a><p>병렬 AI 에이전트 작업을 위한 Git worktree 관리 Rust CLI.</p><div class="rs"><span class="bar"><i style="--w:3.5"></i></span><span class="sv">1.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/NVIDIA/auto-ontology"><i>NVIDIA/</i>auto-ontology</a><p>LLM·에이전트 검색을 더 결정적으로 만드는 그래프 기반 추론 계층 Python 툴킷.</p><div class="rs"><span class="bar"><i style="--w:1.6"></i></span><span class="sv">0.49만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지에서 본 시점의 값. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 5일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <p>뉴스 목록의 최신 글은 10월 28일이며, 어제 호 이후 새 제품 발표는 확인하지 못했다. 아직 다루지 않은 항목만 적는다.</p>
+    <ul class="rows">
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4>GSA와 파트너십 확대, 모든 단계의 정부에 Claude 제공</h4><p>뉴스 목록의 제목은 "Expanding our partnership with GSA to bring Claude to all levels of government"다. 본문은 열어 보지 않아 세부 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">출처 <a href="https://www.anthropic.com/news">Anthropic 뉴스 목록</a></p>
+
+    <h3>연구 노트</h3>
+    <p>연구 목록의 최신 글은 11월 4일자다. 톱 기사 외에는 본문을 열어 보지 않았고 목록의 날짜·제목·분류만 근거로 한다.</p>
+    <ul class="rows">
+      <li><time datetime="2026-11-04">11월 4일</time><div><h4><a href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Investigating vault particles with Claude</a><span class="tag">과학</span></h4><p>오늘의 톱 기사 참조.</p></div></li>
+      <li><time datetime="2026-11-02">11월 2일</time><div><h4><a href="https://www.anthropic.com/research/provable-inference">Progress on provable inference for large language models</a></h4><p>목록상 분류는 Frontier Red Team. 세부 내용은 미확인.</p></div></li>
+      <li><time datetime="2026-10-23">10월 23일</time><div><h4><a href="https://www.anthropic.com/research/alignment-assessment-ukaisi">An alignment assessment of the UK AISI cybertesting incident</a><span class="tag">정렬</span></h4><p>세부 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>새 소식 없음</h3>
+        <p>이번 조사에서 새로 공개된 기기·칩·개발자 도구는 확인하지 못했다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>DeepSeek V4.1 Flash Cyber, 단일 출처</h3><p>LLM Gateway 목록은 10월 29일 출시된 보안 도구용 변형이라고 소개하며, 기반 모델보다 거부를 줄였다고 한다. DeepSeek 자체 발표는 찾지 못했다.</p><p class="src"><a href="https://llmgateway.io/models/deepseek-v4.1-flash-cyber">LLM Gateway</a></p></div>
+      <div><h3>DeepSeek V4.1 Flash 1017</h3><p>9월 10일 나온 V4.1 Flash의 후속 사후 학습 업데이트로, Product Hunt는 점수가 오르고 출력이 짧아졌다고 전한다. 수치는 검증하지 못했다.</p><p class="src"><a href="https://openrouter.ai/deepseek/deepseek-v4.1-flash">OpenRouter</a></p></div>
+      <div><h3>Anthropic 뉴스 목록 재확인</h3><p>10월 22일자 Agent Skills 기증 글 등은 지난 호에서 다뤘다. 10월 28일 이후 새 글은 올라오지 않았다.</p><p class="src"><a href="https://www.anthropic.com/news">Anthropic</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 5일에 웹 검색으로 수집한 보도를 한국어로 정리한 제6호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
