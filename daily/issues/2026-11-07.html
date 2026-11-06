@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제8호 (2026-11-07)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 7일 토요일</span><span>제8호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">앤트로픽, 에이전트 메모리의 구성 요소와 '드리밍' 공개: 메모리를 쓴 모델의 점수가 크게 올랐다</h2>
+    <p class="deck">앤트로픽이 11월 6일 에이전트 메모리를 네 요소로 나눠 설명하고, 오프라인에서 기록을 정리하는 "드리밍"이 메모리를 개선한다는 실험 결과를 내놨다. 수치는 모두 앤트로픽 자체 실험이다.</p>
+    <div class="body">
+      <p>글이 꼽은 구성 요소는 에이전트가 한 모든 일의 검색 가능한 기록(트랜스크립트), 작업 중 남기는 메모 파일, 메모를 엮어 만든 위키 같은 표현 구조, 매 세션에 주입되는 작고 간결한 컨텍스트다. 주입 컨텍스트가 길어지면 토큰을 잡아먹고 모델이 지시를 덜 따를 수 있다고 한다.</p>
+      <p>CL-Bench 데이터베이스 과제에서 Opus 5.5는 메모리 없이 0.655, 메모리를 쓰면 0.838이었고 Opus 5는 0.564에서 0.828로 올랐다. Sonnet 4.6은 0.330에서 0.364에 그치다가 메모리를 읽고 시험해 보라고 지시하자 0.641이 됐다. 포켓몬 레드에서는 Sonnet 3.7이 메모 파일 413개를 쓰고 배지 1개를 얻은 반면, Claude Fable 5는 파일 약 10개로 배지 4개를 땄다. 화면에 안 나오는 전략과 규칙을 적은 점이 차이였다고 설명한다.</p>
+      <p>드리밍이 틀린 메모를 기록과 대조해 고친 뒤에는 에이전트가 행동 1,935회째에 다음 도시에 닿았고, 고치지 않은 쪽은 산을 넘지 못했다. 파일 약 35만 개(약 4.2억 토큰) 말뭉치에서는 드리밍 128회 끝에 위키만의 정확도가 13%에서 48%로, 위키와 검색을 합치면 61%(검색만 53%)였다. 다만 위키가 모든 과제에 도움이 된 것은 아니고 원문보다 커진 경우도 있었다. 독립 검증은 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/research/components-of-agent-memory">Anthropic Research</a>, <a href="https://www.anthropic.com/research">연구 목록</a></p>
+    </div>
+  </article>
+
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-05">11/5</time><span>deepseek-v4-flash-0731<small>DeepSeek (제3자 목록만 확인)</small></span></li>
+      <li><time datetime="2026-11-04">11/4</time><span>GPT Image 2.6 Flare / Sunburst<small>OpenAI</small></span></li>
+      <li><time datetime="2026-10-29">10/29</time><span>DeepSeek V4.1 Flash Cyber<small>DeepSeek</small></span></li>
+      <li><time datetime="2026-10-23">10/23</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+      <li><time datetime="2026-10-21">10/21</time><span>Qwen3.6 27B<small>Alibaba</small></span></li>
+      <li><time datetime="2026-10-19">10/19</time><span>MiniMax M3.1 Flash<small>MiniMax</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://llmgateway.io/timeline">LLM Gateway</a>. 어제 이후 새로 등재된 모델은 확인하지 못했고, 가중치 공개 여부는 목록에 없어 미확인.</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <p>새 언어 순위와 주요 런타임 릴리스는 이번 조사에서 새 발표를 확인하지 못해 생략한다. 아래는 GitHub 트렌딩 페이지(일간)에서 본 목록이다. 어제와 달리 오래된 대형 프로젝트가 다수 올랐고, NVIDIA/auto-ontology와 google/skills는 이틀 연속 올랐다. 페이지 요약에서 이름이 불확실했던 한 항목은 뺐다.</p>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/rust-lang/rust"><i>rust-lang/</i>rust</a><p>안정성과 효율을 내세운 Rust 언어 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">12.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/angular/angular"><i>angular/</i>angular</a><p>웹 애플리케이션 개발 프레임워크(TypeScript).</p><div class="rs"><span class="bar"><i style="--w:83.5"></i></span><span class="sv">10.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/zed-industries/zed"><i>zed-industries/</i>zed</a><p>Atom과 Tree-sitter 제작진이 만든 빠른 협업 코드 편집기(Rust).</p><div class="rs"><span class="bar"><i style="--w:77.1"></i></span><span class="sv">9.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/prometheus/prometheus"><i>prometheus/</i>prometheus</a><p>모니터링 시스템이자 시계열 데이터베이스(Go).</p><div class="rs"><span class="bar"><i style="--w:55.3"></i></span><span class="sv">6.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/rails/rails"><i>rails/</i>rails</a><p>Ruby 웹 애플리케이션 프레임워크.</p><div class="rs"><span class="bar"><i style="--w:48.6"></i></span><span class="sv">5.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mpv-player/mpv"><i>mpv-player/</i>mpv</a><p>명령줄 미디어 플레이어(C).</p><div class="rs"><span class="bar"><i style="--w:31.2"></i></span><span class="sv">3.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/symfony/symfony"><i>symfony/</i>symfony</a><p>PHP 웹 프레임워크.</p><div class="rs"><span class="bar"><i style="--w:25.9"></i></span><span class="sv">3.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google/skills"><i>google/</i>skills</a><p>구글 제품·기술용 에이전트 스킬 모음(Python). 하루 +532.</p><div class="rs"><span class="bar"><i style="--w:18.8"></i></span><span class="sv">2.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/NVIDIA/auto-ontology"><i>NVIDIA/</i>auto-ontology</a><p>LLM·에이전트 워크플로를 위한 그래프 기반 의미 추론 Python 프레임워크. 하루 +2,005.</p><div class="rs"><span class="bar"><i style="--w:7.4"></i></span><span class="sv">0.9만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지에서 본 시점의 값. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 7일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <p>뉴스 목록의 최신 글은 여전히 10월 28일자이며, 어제 호 이후 새 제품 발표는 확인하지 못했다. 목록에 제목 없이 11월 6일 날짜 머리글만 보이는 항목이 있으나 내용은 미확인.</p>
+    <ul class="rows">
+      <li><time datetime="2026-10-28">10월 28일</time><div><h4>AI for Science, 재단과 연구기관으로 확대</h4><p>목록의 제목은 "AI for Science expands to foundations and research institutions"다. 본문은 열어 보지 않아 세부 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">출처 <a href="https://www.anthropic.com/news">Anthropic 뉴스 목록</a></p>
+
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory</a><span class="tag">엔지니어링</span></h4><p>오늘의 톱 기사 참조.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models">Teaching AI to build scientific models</a><span class="tag">과학</span></h4><p>튀빙겐 ELLIS 연구소 연구자 3명(Macke, Gedon, Wahl)이 쓴 초청 글이다. AI가 데이터에 맞는 모델 하나만 내놓지 말고, 그럴듯한 모델들의 분포와 탈락한 대안까지 보여줘야 과학적 이해에 도움이 된다고 주장한다. 호지킨-헉슬리 모델 변형 탐색 예시에서는 네 군집의 비중이 41%, 39%, 11%, 9%였다. 글쓴이들은 지금까지 시험이 대부분 이미 알려진 모델의 재현에 그쳤고, 해석 단계의 자동화는 어렵다고 인정한다.</p></div></li>
+      <li><time datetime="2026-11-05">11월 5일</time><div><h4><a href="https://www.anthropic.com/research/how-researchers-use-claude">AI for scientific discovery: How researchers use Claude</a><span class="tag">경제</span></h4><p>어제 호에서 다룬 연구자 사용 방식 분석.</p></div></li>
+      <li><time datetime="2026-11-04">11월 4일</time><div><h4><a href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Investigating vault particles with Claude</a><span class="tag">과학</span></h4><p>vault 입자 구조 규명 글(지난 호에서 다룸).</p></div></li>
+      <li><time datetime="2026-11-02">11월 2일</time><div><h4><a href="https://www.anthropic.com/research/provable-inference">Progress on provable inference for large language models</a><span class="tag">과학</span></h4><p>목록의 분류는 Frontier Red Team이다. 본문은 열어 보지 않아 세부 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>새 소식 없음</h3>
+        <p>이번 조사에서 새로 공개된 기기·칩·개발자 도구는 확인하지 못했다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>DeepSeek, deepseek-v4-flash-0731 등재</h3><p>LLM Gateway 타임라인의 최신 항목으로 11월 5일자다. 가중치 공개 여부와 성능은 목록에 없고 DeepSeek 자체 발표는 찾지 못했다.</p><p class="src"><a href="https://llmgateway.io/timeline">LLM Gateway</a></p></div>
+      <div><h3>OpenAI, GPT Image 2.6 Flare·Sunburst</h3><p>11월 4일자 이미지 모델 두 종이 타임라인에 올라 있다. 차이와 성능은 확인하지 못했다.</p><p class="src"><a href="https://llmgateway.io/timeline">LLM Gateway</a></p></div>
+      <div><h3>메모리 글의 한계 고백</h3><p>앤트로픽은 위키형 메모리가 모든 과제에서 효과가 있지는 않았고, 메모를 언제 쓰고 언제 백그라운드 처리로 미룰지 등이 아직 열린 질문이라고 적었다.</p><p class="src"><a href="https://www.anthropic.com/research/components-of-agent-memory">Anthropic Research</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 7일에 웹 검색으로 수집한 보도를 한국어로 정리한 제8호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
