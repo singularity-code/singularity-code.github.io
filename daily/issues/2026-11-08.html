@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제9호 (2026-11-08)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 8일 일요일</span><span>제9호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Thinking Machines, Inkling 2 Small 공개: 594B MoE, Apache 2.0 가중치는 "다음 주" 약속</h2>
+    <p class="deck">Thinking Machines Lab이 11월 5일 Inkling 2 Small을 내놨다. 지금은 자사 Tinker에서만 돌아가고, 외부 안전성 시험 뒤 Apache 2.0 가중치를 공개한다고 한다. 아래 수치는 모두 2차 집계 보도 기준이며 개발사 원문은 확인하지 못했다.</p>
+    <div class="body">
+      <p>aiweekly.co의 11월 7일자 요약에 따르면 이 모델은 총 594B 파라미터에 활성 17B인 MoE이고, 2.92억 파라미터의 비전 인코더를 갖췄다. 현재는 Tinker에서만 쓸 수 있다.</p>
+      <p>같은 요약은 SWEBench Pro Hard 86.3%, DeepSWE 72.1%를 전한다. 누가 어떤 조건에서 잰 점수인지는 확인하지 못했으므로 독립 검증을 거친 값으로 보면 안 된다.</p>
+      <p>가중치가 약속대로 풀리면 오픈 웨이트 코딩 모델의 새 기준점이 될 수 있다. 다만 공개는 아직 이뤄지지 않았다. 같은 날 OpenAI는 보안 특화 모델 GPT-6 Cyber를 제한된 프로그램으로만 냈고, 트래커는 이 모델이 자체 위험 등급 "Critical"로 출시됐다고 전한다(트래커 기준, 미확인).</p>
+      <p class="src">출처 <a href="https://aiweekly.co/ai-news-today">AI Weekly</a>, <a href="https://llmgateway.io/timeline">LLM Gateway</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-05">11/5</time><span class="hl">Inkling 2 Small<small>Thinking Machines (가중치는 공개 예고)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>GPT-6 Cyber<small>OpenAI (제한 프로그램)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Hy4<small>Tencent (2차 보도)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Gemini Omni 1.2 Flash<small>Google (영상 생성)</small></span></li>
+      <li><time datetime="2026-11-06">11/6</time><span>Arete-27B<small>Nous Research (Qwen3.8-27B 미세조정, Apache 2.0)</small></span></li>
+      <li><time datetime="2026-11-06">11/6</time><span>ToyBlocks<small>Ai2 (로봇 시뮬레이션, 가중치 공개)</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://aiweekly.co/ai-news-today">AI Weekly</a>. 집계 사이트 간 목록이 엇갈려 개발사 원문은 대부분 미확인.</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <p>새 언어 순위와 주요 런타임 릴리스는 이번 조사에서 확인하지 못해 생략한다. 보안 쪽에서는 OpenSSH 10.6p2가 musl-libc 시스템에서 비밀번호가 비활성화된 계정이 256자 이상 비밀번호로 열릴 수 있는 결함을 고쳤다고 한다(2차 보도, 미확인). 아래는 GitHub 트렌딩(일간) 목록이며, 에이전트 스킬 저장소가 상위를 채웠다.</p>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/mattpocock/skills"><i>mattpocock/</i>skills</a><p>저자 본인의 설정에서 뽑은 엔지니어링용 에이전트 스킬. 하루 +1,111.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">31.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/skills"><i>anthropics/</i>skills</a><p>앤트로픽의 공개 에이전트 스킬 모음. 하루 +386.</p><div class="rs"><span class="bar"><i style="--w:59.4"></i></span><span class="sv">18.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/sherlock-project/sherlock"><i>sherlock-project/</i>sherlock</a><p>사용자 이름으로 여러 소셜 네트워크의 계정을 찾는 도구. 하루 +1,819.</p><div class="rs"><span class="bar"><i style="--w:31.6"></i></span><span class="sv">10.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/tailwindlabs/tailwindcss"><i>tailwindlabs/</i>tailwindcss</a><p>유틸리티 우선 CSS 프레임워크. 하루 +181.</p><div class="rs"><span class="bar"><i style="--w:31.0"></i></span><span class="sv">9.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/prometheus/prometheus"><i>prometheus/</i>prometheus</a><p>모니터링 시스템이자 시계열 데이터베이스. 어제에 이어 이틀 연속. 하루 +325.</p><div class="rs"><span class="bar"><i style="--w:21.2"></i></span><span class="sv">6.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cloudflare/security-audit-skill"><i>cloudflare/</i>security-audit-skill</a><p>검증된 기계 판독 결과를 내는 단계별 보안 감사용 에이전트 스킬. 하루 +2,088.</p><div class="rs"><span class="bar"><i style="--w:20.7"></i></span><span class="sv">6.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/astral-sh/ruff"><i>astral-sh/</i>ruff</a><p>Rust로 만든 매우 빠른 Python 린터·포매터. 하루 +350.</p><div class="rs"><span class="bar"><i style="--w:16.0"></i></span><span class="sv">5.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-browser"><i>vercel-labs/</i>agent-browser</a><p>AI 에이전트용 브라우저 자동화 CLI. 하루 +180.</p><div class="rs"><span class="bar"><i style="--w:14.7"></i></span><span class="sv">4.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google/skills"><i>google/</i>skills</a><p>구글 제품·기술용 에이전트 스킬 모음. 사흘 연속. 하루 +449.</p><div class="rs"><span class="bar"><i style="--w:7.3"></i></span><span class="sv">2.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/milind-soni/OpenMausBot"><i>milind-soni/</i>OpenMausBot</a><p>Grok 봇의 오픈소스 대안으로, 봇이 쓸 가상 머신을 제공. 하루 +1,986.</p><div class="rs"><span class="bar"><i style="--w:5.3"></i></span><span class="sv">1.7만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지에서 본 시점의 값. 출처 <a href="https://github.com/trending">GitHub Trending</a>, <a href="https://aiweekly.co/ai-news-today">AI Weekly</a>(OpenSSH)</p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 8일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <p>뉴스 목록의 최신 글은 10월 28일자로, 어제 호 이후 새 발표는 확인하지 못했다. 최근 항목 가운데 어제 호에서 다루지 않은 두 건만 적는다.</p>
+    <ul class="rows">
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4>GSA와 파트너십 확대</h4><p>목록 설명에 따르면 미 연방조달청(GSA)과의 새 계약으로 정부 파트너가 Claude 제품을 할인받는다. 본문은 열어 보지 않았다.</p></div></li>
+      <li><time datetime="2026-10-22">10월 22일</time><div><h4>Agent Skills를 Agentic AI Foundation에 기증</h4><p>앤트로픽이 Agent Skills 표준을 재단에 넘긴다고 목록은 전한다. 오늘 트렌딩 상위에 스킬 저장소가 여럿 오른 것과 맥락이 닿지만, 둘의 인과는 확인하지 못했다.</p></div></li>
+    </ul>
+    <p class="src">출처 <a href="https://www.anthropic.com/news">Anthropic 뉴스 목록</a></p>
+
+    <h3>연구 노트</h3>
+    <p>연구 목록의 최신 글은 11월 6일자이고 어제 호 이후 새 글은 없다. 이전 호에서 다루지 않은 글만 적는다.</p>
+    <ul class="rows">
+      <li><time datetime="2026-10-27">10월 27일</time><div><h4><a href="https://www.anthropic.com/research/agents-judgment-calls">How AI agents shape experts' judgment calls</a><span class="tag">정렬</span></h4><p>목록의 분류는 Alignment다. 본문은 열어 보지 않아 세부 내용은 미확인.</p></div></li>
+      <li><time datetime="2026-10-23">10월 23일</time><div><h4><a href="https://www.anthropic.com/research/alignment-assessment-ukaisi">An alignment assessment of the UK AISI cybertesting incident</a><span class="tag">정렬</span></h4><p>제목 외 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>새 소식 없음</h3>
+        <p>이번 조사에서 새로 공개된 기기·칩은 확인하지 못했다. 인프라 쪽에서는 AWS SageMaker 실시간 엔드포인트가 NVIDIA Multi-Instance GPU를 지원해 GPU 하나를 최대 7개로 쪼개 쓸 수 있게 됐다(P4d, P5, G7, G7e 인스턴스, 2차 보도).</p>
+        <p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>DeepMind, 1024비트 RSA 공격 개선</h3><p>11월 6일 보도에 따르면 AI 에이전트가 짧은 다이제스트 키의 서명 위조를 약 1,600배, 일괄 인수분해 비용을 약 30배 낮추는 두 가지 진전을 냈다. RSA-2048에는 영향이 없다고 한다.</p><p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p></div>
+      <div><h3>Nous Research, Arete-27B 공개</h3><p>Alibaba의 Qwen3.8-27B를 Apache 2.0으로 미세조정한 모델이다. 팀 자체 평가에서 Terminal-Bench-2.1이 67%에서 70%로 올랐다고 한다.</p><p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p></div>
+      <div><h3>데이터센터 건설 제동 논란</h3><p>도이체방크 이코노미스트는 선거 뒤 미국의 건설 제한이 AI 거품을 식힐 수 있다고 말했다. 골드만은 계획 용량의 약 45%가 해당 주에 있다고 추정한다. 2차 보도라 미확인.</p><p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p></div>
+      <div><h3>Claude, 노트 삭제 사고 보도</h3><p>시카고대 교수가 페이지 번호 재정렬만 맡긴 Claude가 강의 노트를 지웠다고 밝혔으며, 파일은 Dropbox에서 복구했다고 한다. 당사자 진술 기반으로 앤트로픽 입장은 확인하지 못했다.</p><p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 8일에 웹 검색으로 수집한 보도를 한국어로 정리한 제9호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
