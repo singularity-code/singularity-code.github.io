@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제10호 (2026-11-09)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 9일 월요일</span><span>제10호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Claude Code '다시 묻지 않기'가 비밀번호를 평문으로 저장: 공개 GitHub 저장소 1,122개 파일에서 시크릿 발견</h2>
+    <p class="deck">보안 업체 Apiiro가 Claude Code의 승인 기능이 명령어째로 저장하는 설정 파일을 공개 저장소에서 조사했다. 명령에 섞여 들어간 비밀번호와 토큰이 그대로 남아 있었다.</p>
+    <div class="body">
+      <p>The Hacker News(11월 7일자)에 따르면, 명령 승인창에서 "Yes, and don't ask again"을 고르면 Claude Code가 그 명령 전체를 프로젝트의 <code>.claude/settings.local.json</code>에 저장한다. 명령에 비밀번호나 토큰이 들어 있으면 그것도 평문으로 남고, 이후 세션에서는 일치하는 명령이 묻지 않고 실행된다. 팀이 일부러 커밋하는 <code>.claude/settings.json</code>에서도 같은 일이 생기는 경우가 있다고 한다.</p>
+      <p>Apiiro의 조사 결과는 이렇다. 공개 저장소 약 103,617곳에서 이 파일 약 104,185개를 찾았고, 그중 1,122개(약 1.1%)에 시크릿이 하나 이상 있었다(고유 1,379개). 데이터베이스 비밀번호 379개, SSH 로그인 43개, GitHub·GitLab·npm 토큰 42개, AWS 키 23개가 포함됐다. Apiiro는 이 값들이 아직 유효한지는 시험하지 않았다. 이전 git 이력과 공유 설정, 대화 로그까지 합치면 1,994개 저장소에서 2,539개다. gitleaks는 1,122개 중 564개, TruffleHog는 643개만 잡아냈고 215개는 둘 다 놓쳤다.</p>
+      <p>앤트로픽의 대응에 대해서는 Apiiro 쪽 주장만 확인했다. Claude Code가 이 파일을 사용자의 전역 git 제외 목록에는 넣지만 프로젝트의 <code>.gitignore</code>에는 넣지 않아 다른 사용자에게는 보호가 이어지지 않는다는 것이다. 2025년 8월에 올라온 관련 버그 리포트는 자동화 봇이 2026년 1월 "not planned"로 닫았고, 연구자들은 앤트로픽의 답변을 받지 못했다고 한다. 앤트로픽의 입장은 확인하지 못했다. 권고는 조직 저장소와 git 이력에서 두 설정 파일을 찾고, 들어 있던 자격 증명을 먼저 교체한 뒤, 로컬 파일을 추적에서 빼 <code>.gitignore</code>에 넣으라는 것이다. 명령에는 시크릿을 직접 쓰지 말고 환경 변수 참조를 쓰라고도 한다.</p>
+      <p class="src">출처 <a href="https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html">The Hacker News</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-10-29">10/29</time><span class="hl">Mistral Large 4<small>Mistral (오픈 웨이트, 약 1조 MoE, 지난 호들에서 다룸)</small></span></li>
+      <li><time datetime="2026-11-04">11/4</time><span>GPT Image 2.6 Flare·Sunburst<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>deepseek-v4-flash-0731<small>DeepSeek (목록 등재, 공개 여부 미확인)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Inkling 2 Small<small>Thinking Machines (트래커 기준 날짜)</small></span></li>
+      <li><time datetime="2026-11-08">주간</time><span>Kimi K3.1 Pro<small>Moonshot (가중치 공개 보도, 날짜 미확인)</small></span></li>
+      <li><time datetime="2026-11-08">주간</time><span>Ripple-65B Preview<small>Ricursive (밀집 65B, 날짜 미확인)</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">이번 주 새로 확정된 오픈 웨이트 모델은 확인하지 못했다. 아래 두 항목은 트래커 요약 기반이다. 출처 <a href="https://llmgateway.io/timeline">LLM Gateway</a>, <a href="https://opper.ai/model-releases">Opper</a></p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위·릴리스: 새 소식 없음</h3><p>이번 조사에서 새 순위 발표나 주요 언어·런타임의 새 릴리스는 확인하지 못했다.</p></div>
+      <div><h3>Microsoft, 에이전트 패키지 매니저 APM</h3><ul class="bul"><li>스킬·프롬프트·플러그인·MCP 서버를 <code>apm.yml</code> 하나에 선언하고 <code>apm install</code>로 설치한다</li><li>잠금 파일이 버전과 콘텐츠 해시를 고정하고, 설치 때 숨은 유니코드를 검사한다</li><li>Claude Code, Copilot, Cursor, Codex, Gemini 등 9개 하네스를 지원한다. MIT 라이선스</li></ul><p class="src"><a href="https://microsoft.github.io/apm/">APM 문서</a> (버전은 문서에 없어 미확인)</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/skills"><i>anthropics/</i>skills</a><p>Agent Skills 공개 저장소. 오늘 +793.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">18.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/sherlock-project/sherlock"><i>sherlock-project/</i>sherlock</a><p>사용자 이름으로 여러 SNS 계정을 찾는 도구. 오늘 +2,372.</p><div class="rs"><span class="bar"><i style="--w:54"></i></span><span class="sv">10.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-browser"><i>vercel-labs/</i>agent-browser</a><p>AI 에이전트용 브라우저 자동화 CLI. 오늘 +812.</p><div class="rs"><span class="bar"><i style="--w:25"></i></span><span class="sv">4.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/claude-quickstarts"><i>anthropics/</i>claude-quickstarts</a><p>Claude API로 앱을 만드는 시작 프로젝트 모음.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">1.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/milind-soni/OpenMausBot"><i>milind-soni/</i>OpenMausBot</a><p>Grok Bot의 오픈소스 대안, 봇용 VM 포함. 오늘 +1,437.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">1.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/meta/astryx"><i>meta/</i>astryx</a><p>에이전트용으로 만든 커스터마이즈 가능한 오픈소스 디자인 시스템. 오늘 +863.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">1.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google-deepmind/mujoco"><i>google-deepmind/</i>mujoco</a><p>다관절 접촉 동역학용 범용 물리 시뮬레이터.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">1.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ranxianglei/billion-context"><i>ranxianglei/</i>billion-context</a><p>작은 컨텍스트 창에서 긴 세션을 돌리게 압축하는 플러그인. 오늘 +460.</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">5.1k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/dsx-ai-factory/nvke"><i>dsx-ai-factory/</i>nvke</a><p>베어메탈 GPU 쿠버네티스 관리 플레인(NVIDIA). 오늘 +345.</p><div class="rs"><span class="bar"><i style="--w:1"></i></span><span class="sv">818</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지(일간)에서 직접 확인한 값이다. 트렌딩에는 9개만 올라 있었다. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (2026년 11월 9일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-10-28">10월 28일</time><div><h4>새 공식 발표 없음</h4><p>anthropic.com/news 목록의 최신 글은 10월 28일 "AI for Science expands to foundations and research institutions"다. 지난 호 이후 추가된 글은 없었다.</p></div></li>
+      <li><time datetime="2026-11-07">11월 7일</time><div><h4>기업 고객에 데이터 접근 사고 통지(2차 보도)</h4><p>보도에 따르면 외부 보안 업체가 10월 말 계정 메타데이터와 사용량·지출 데이터를 열람했을 수 있다고 앤트로픽이 기업 고객에게 알렸다. 통지문은 대화 내용, 비밀번호, 결제 정보는 노출되지 않았다고 한다. 앤트로픽의 공식 게시는 찾지 못했다.</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory</a><span class="tag">엔지니어링</span></h4><p>지난 호 톱 기사에서 다룬 글. 지난 호 이후 목록에 새 글은 없다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models">Teaching AI to build scientific models</a><span class="tag">과학</span></h4><p>튀빙겐 연구자들의 초청 글. 지난 호에서 다룸.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a>. 사고 통지 보도는 <a href="https://mlq.ai/news/anthropic-emails-enterprise-customers-that-an-outside-security-firm-may-have-viewed-their-contact-plan-and-spend-data/">MLQ</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div>
+        <h3>새 공개 제품 없음</h3>
+        <p>이번 조사에서 새로 공개된 기기·칩은 확인하지 못했다. 보도 수준의 움직임은 있었다. Amazon이 Fauna의 Sprout 로봇을 중심으로 Personal Robotics Group을 꾸린 것으로 보이며, 채용 공고가 근거다. 가격과 출시일은 발표되지 않았다. 같은 날 Gurman은 Apple이 2027년 목표로 에이전트형 Siri를 추진한다고 전했다(모두 2차 보도).</p>
+        <p class="src"><a href="https://www.cnbc.com/2026/11/08/amazon-home-robot-fauna-sprout.html">CNBC</a>, <a href="https://9to5mac.com/2026/11/08/apple-working-on-agentic-siri-ai-next-year-report">9to5Mac</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Claude Max 사용량 소송 일부 진행</h3><p>보도에 따르면 법원이 "5배 또는 20배 더 많은 사용량"이라는 홍보 문구가 구독자를 오인시킬 수 있다고 보고 Kahn v. Anthropic의 일부 청구를 인정했다. 판결문은 직접 보지 못했다.</p><p class="src"><a href="https://thenextweb.com/news/anthropic-claude-max-lawsuit-ruling-usage-claims">The Next Web</a></p></div>
+      <div><h3>DeepSeek Harness, 일간 사용자 154만</h3><p>DeepSeek이 Bloomberg에 밝힌 바로는 오픈소스 에이전트 앱의 일간 활성 사용자가 11월 4일 기준 154만 명이고 하루 약 92조 토큰을 처리한다. 회사 자체 수치이며 Bloomberg 원문은 열지 못했다.</p><p class="src"><a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p></div>
+      <div><h3>xAI, Grok API 텍스트 워터마크 기본 적용</h3><p>보도에 따르면 7개 모델의 응답에 통계적 워터마크가 기본으로 붙고, 끄는 것은 EU AI Act 예외 사유를 밝힐 때만 가능하다. 2차 보도.</p><p class="src"><a href="https://www.datastudios.org/post/grok-api-invisible-text-watermarking-default-november-7-eu-ai-act">Data Studios</a></p></div>
+      <div><h3>에이전트 감사 모델의 오탐 문제</h3><p>METR 연구 재현에서, 에이전트의 보상 해킹 탐지율을 99%까지 올리면 오탐이 크게 늘어 사람 검토자가 감당하기 어려워질 수 있다는 결과가 나왔다고 한다.</p><p class="src"><a href="https://the-decoder.com/ai-auditors-catch-most-agent-misbehavior-but-flood-reviewers-with-false-alarms-new-study-finds/">The Decoder</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 9일에 웹 검색으로 수집한 보도를 한국어로 정리한 제10호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
