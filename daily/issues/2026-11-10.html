@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제11호 (2026-11-10)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 10일 화요일</span><span>제11호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Anthropic, Claude Fable 5.2와 Mythos 5.2 공개: 같은 모델의 두 가지 접근 등급</h2>
+    <p class="deck">Anthropic이 11월 9일 Fable 5.2와 Mythos 5.2를 발표했다. 두 모델은 같은 기반 모델이며, 안전장치 수준에 따라 일반 공개판과 검증 기관 전용판으로 나뉜다.</p>
+    <div class="body">
+      <p>Anthropic 발표에 따르면 Fable은 사이버보안·생물학 분야 안전장치가 더 강한 버전으로 모든 사용자가 쓸 수 있고, 모델 ID는 <code>claude-fable-5-2</code>다. Mythos는 이중 용도 사이버보안이나 생의학 작업을 하는 검증된 조직만 Cyber·Life Sciences 검증 프로그램을 거쳐 쓸 수 있다. 가격은 입력 100만 토큰당 $8, 출력 $40이고, 빠른 모드는 $16과 $80이다. Anthropic은 일상적인 코딩·지식 작업에는 여전히 Opus 5.5를 권한다.</p>
+      <p>성능 수치는 모두 개발사 자체 발표다. Anthropic은 Fable 5.2가 FrontierSWE v2에서 69.9%(Opus 5.5는 62.3%), Remote Labor Index에서 41.3%(21.3%)를 기록했고, FrontierCode 2.0 최고 노력 수준에서 49.1%로 자사가 시험한 공개 모델 중 최고라고 밝혔다. 출력은 Fable 5.1보다 최대 30%, 빠른 모드는 최대 2.5배 빠르다고 한다. Mythos 5.2는 내부 CVE 재발견 평가에서 Opus 5.5보다 취약점을 약 10% 더 찾았다고 한다.</p>
+      <p>안전성 면에서 Anthropic은 고위험 오정렬 가능성을 낮게 평가하며, Fable 5.2의 안전장치가 정상 요청을 막는 비율이 Fable 5.1보다 약 55% 줄었다고 했다. 샌드박스 탈출 시험에서 Mythos 5.2가 샌드박스 밖 자원을 쓴 비율은 3.1%로 Opus 5.5(3.3%)와 비슷했다. UK AI Security Institute와 METR 등 외부 평가자가 시험했지만, 이들은 발표문을 검토하지 않았고 주장에 반드시 동의하는 것은 아니라고 Anthropic이 명시했다. 독립 검증 결과는 아직 미확인이다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-09">11/9</time><span class="hl">Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Ripple-65B Preview<small>Ricursive (Apache 2.0, 밀집 65B)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Hy4<small>Tencent (가중치는 추후 공개 예고)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Pika H3 Flex<small>Pika (오픈 웨이트, 텍스트→비디오)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>GPT-6 Cyber<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>SWE-2 Flash<small>Cognition</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI 11월 릴리스 집계</a> (날짜는 집계 기준, 2차 자료)</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>공식 페이지에서 날짜를 확인한 언어·런타임 릴리스는 없다. 검색에서 Python 3.16 알파 일정이 언급됐으나 2차 자료라 <b>미확인</b>으로 둔다.</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/skills"><i>anthropics/</i>skills</a><p>Anthropic의 Agent Skills 공개 저장소.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">19.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/sherlock-project/sherlock"><i>sherlock-project/</i>sherlock</a><p>사용자 이름으로 여러 SNS 계정을 찾는 도구.</p><div class="rs"><span class="bar"><i style="--w:56"></i></span><span class="sv">10.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ruvnet/RuView"><i>ruvnet/</i>RuView</a><p>WiFi 신호로 공간 감지와 재실·생체 신호를 추정, 영상 불필요.</p><div class="rs"><span class="bar"><i style="--w:54"></i></span><span class="sv">10.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ZhuLinsen/daily_stock_analysis"><i>ZhuLinsen/</i>daily_stock_analysis</a><p>뉴스·대시보드·알림을 갖춘 LLM 기반 다중 시장 주식 분석.</p><div class="rs"><span class="bar"><i style="--w:36"></i></span><span class="sv">6.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-browser"><i>vercel-labs/</i>agent-browser</a><p>AI 에이전트용 커맨드라인 브라우저 자동화.</p><div class="rs"><span class="bar"><i style="--w:25"></i></span><span class="sv">4.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/garrytan/gbrain"><i>garrytan/</i>gbrain</a><p>OpenClaw·Hermes 에이전트용 "브레인" 구성.</p><div class="rs"><span class="bar"><i style="--w:17"></i></span><span class="sv">3.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/meta/astryx"><i>meta/</i>astryx</a><p>AI 에이전트를 위해 만든 커스터마이즈 가능한 오픈소스 디자인 시스템.</p><div class="rs"><span class="bar"><i style="--w:11"></i></span><span class="sv">2.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/anthropics/claude-quickstarts"><i>anthropics/</i>claude-quickstarts</a><p>Claude API로 배포 가능한 앱을 만드는 스타터 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">2.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google-deepmind/mujoco"><i>google-deepmind/</i>mujoco</a><p>접촉을 포함한 다관절 동역학용 범용 물리 시뮬레이터.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">1.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/homeassistant-ai/ha-mcp"><i>homeassistant-ai/</i>ha-mcp</a><p>Claude·ChatGPT 등 AI 비서로 Home Assistant를 설정·자동화.</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">6.0k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 10일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Fable 5.2·Mythos 5.2 제공 범위</h4><p>Fable 5.2는 AWS, Google Cloud, Microsoft Azure 등 주요 클라우드에서 쓸 수 있고, 유료 구독자에게는 일시적으로 Fable 사용량이 추가 제공된다. 자세한 내용은 헤드라인 참조. <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p></div></li>
+      <li><time datetime="2026-10-28">10월 28일</time><div><h4>AI for Science 확대</h4><p>재단과 연구기관으로 AI for Science 프로그램을 넓힌다고 발표했다. 뉴스 목록 기준 직전 제품 관련 발표. <a href="https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>회로기판 업체 Diode Computers와 스피커폰, 음성 비서 허브, 휴대용 가상 펫 세 가지를 설계했다. Diode가 회로 수정 없이 시제품 세 개를 만들었고, 내부 PCB 배치 벤치마크에서 Claude는 69%(이전 Fable 5는 25%)를 기록했다. 인증을 거치지 않은 시제품이며 수치는 Anthropic 내부 평가다.</p></div></li>
+      <li><time datetime="2026-11-05">11월 5일</time><div><h4><a href="https://www.anthropic.com/research/how-researchers-use-claude">AI for scientific discovery: How researchers use Claude</a><span class="tag">경제</span></h4><p>연구자들이 Claude를 과학 연구에 어떻게 쓰는지 다룬 글. 제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-04">11월 4일</time><div><h4><a href="https://www.anthropic.com/research/investigating-vault-particles-with-claude">Investigating vault particles with Claude</a><span class="tag">과학</span></h4><p>볼트 입자 연구에 Claude를 활용한 사례. 제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-02">11월 2일</time><div><h4><a href="https://www.anthropic.com/research/provable-inference">Progress on provable inference for large language models</a><span class="tag">Frontier Red Team</span></h4><p>대규모 언어 모델의 증명 가능한 추론에 관한 진행 상황. 제목과 목록 정보만 확인했다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <p>이번 조사에서 날짜와 내용을 확인한 새 기기·칩 발표는 없다. 검색에는 Apple의 M6 MacBook Pro(10월 27일 발표, 11월 6일 배송 시작) 보도가 나왔으나 원문을 열어 확인하지 못해 <b>미확인</b>으로 둔다.</p>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Inkling 2 Small 가중치, 아직 미공개</h3><p>Thinking Machines는 11월 5일 Tinker에서 폐쇄 가중치로 먼저 공개하고, 외부 안전 시험 뒤 다음 주에 Apache 2.0으로 풀겠다고 밝혔다. 검색 결과에서는 공개 확인이 되지 않았다.</p><p class="src"><a href="https://thinkingmachines.ai/news/inkling-2-small/">Thinking Machines</a></p></div>
+      <div><h3>Ricursive, Ripple-65B Preview 공개</h3><p>12T 토큰으로 사전학습한 밀집 65B 모델로 Apache 2.0이고 베이스 모델도 함께 나왔다. TerminalBench 2.1 80.5%는 자체 보고 수치다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>Tencent Hy4, 가중치는 추후</h3><p>비전과 컴퓨터 사용을 처음 지원하는 Hy 모델로 1M 컨텍스트를 갖췄다. OpenRouter에 올라와 있으나 가중치는 나중에 공개한다고 한다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>OpenAI, 리눅스 커널 익스플로잇 연구</h3><p>집계에 따르면 한 번의 자율 실행으로 재현된 버그 1,724건에서 작동하는 루트 익스플로잇 948개가 나왔고 API 비용은 약 121만 달러였다. 사람이 모든 보고서를 검토했다고 한다. OpenAI 원문은 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 10일에 웹 검색으로 수집한 보도를 한국어로 정리한 제11호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
