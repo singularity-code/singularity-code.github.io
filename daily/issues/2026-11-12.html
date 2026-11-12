@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제12호 (2026-11-12)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 12일 목요일</span><span>제12호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Moonshot AI, 2.8T 파라미터 오픈 웨이트 Kimi K3.1 Pro 공개</h2>
+    <p class="deck">Moonshot AI가 총 2.8T, 토큰당 활성 104B 파라미터의 MoE 모델 Kimi K3.1 Pro의 가중치를 Hugging Face에 올렸다. 성능 수치는 모두 개발사 자체 보고다.</p>
+    <div class="body">
+      <p>Hugging Face 모델 카드에 따르면 이 모델은 전문가 896개 중 토큰마다 16개와 공유 전문가 2개를 쓰는 MoE 구조이며, 텍스트와 이미지를 입력받고 컨텍스트는 약 100만 토큰이다. 가중치는 MXFP4, 활성값은 MXFP8로 양자화 인식 학습을 거쳤다고 적혀 있다. 라이선스는 별도의 "Kimi K3.1 Pro License"이며, 집계 자료는 대형 제품에 Kimi 이름 표기를 요구한다고 전한다(라이선스 원문은 미확인).</p>
+      <p>모델 카드의 벤치마크는 Terminal-Bench 4.0 65.7, DeepSWE v1.1 75.5, BrowseComp 92.1, GPQA-Diamond 94.2 등이다. 비교 대상은 Claude Fable 5.1, GPT-6 Astra, Claude Opus 5.5 등이고, 집계 자료에 따르면 Terminal-Bench 4.0에서 Opus 5.5는 66.4로 Kimi가 근소하게 낮다. 모두 reasoning effort "max" 설정의 자체 결과이며 독립 검증은 아직 확인하지 못했다.</p>
+      <p>API 가격은 집계 자료 기준 입력 100만 토큰당 $4, 출력 $20이다. 공개 날짜는 모델 카드에 없고 집계 자료가 11월 5일로 분류했으므로 날짜는 2차 자료 기준이다. 11월 10일자 제11호에서는 다루지 않은 소식이다.</p>
+      <p class="src">출처 <a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro">Hugging Face 모델 카드</a>, <a href="https://thursdai.news/releases/2026-11">ThursdAI 11월 릴리스 집계 (2차)</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span class="hl">Kimi K3.1 Pro<small>Moonshot AI (오픈 웨이트, MoE 2.8T)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Ripple-65B Preview<small>Ricursive (Apache 2.0)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Pika H3 Flex<small>Pika (오픈 웨이트, 텍스트→비디오)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Hy4<small>Tencent (가중치는 추후)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>GPT-6 Cyber<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>SWE-2 Flash<small>Cognition</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI 11월 릴리스 집계</a> (날짜는 집계 기준, 2차 자료)</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>공식 페이지에서 날짜를 확인한 언어·런타임 릴리스는 이번에도 없다(<b>미확인</b>). 집계 자료에는 Claude Code 2.1.317이 게임 재현 금지 규칙을 장르 설명에 한해 완화했다는 보도(Dexerto 인용)가 있으나 원문은 열람하지 못했다.</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/addyosmani/agent-skills"><i>addyosmani/</i>agent-skills</a><p>AI 코딩 에이전트를 위한 실무급 엔지니어링 스킬 모음.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">11.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ZhuLinsen/daily_stock_analysis"><i>ZhuLinsen/</i>daily_stock_analysis</a><p>예약 실행·알림을 갖춘 LLM 기반 다중 시장 주식 분석.</p><div class="rs"><span class="bar"><i style="--w:61"></i></span><span class="sv">7.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/TheAlgorithms/Java"><i>TheAlgorithms/</i>Java</a><p>Java로 구현한 알고리즘 모음.</p><div class="rs"><span class="bar"><i style="--w:58"></i></span><span class="sv">6.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/vercel-labs/agent-browser"><i>vercel-labs/</i>agent-browser</a><p>AI 에이전트용 커맨드라인 브라우저 자동화.</p><div class="rs"><span class="bar"><i style="--w:43"></i></span><span class="sv">5.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/meta/astryx"><i>meta/</i>astryx</a><p>에이전트 친화적인 커스터마이즈 가능한 오픈소스 디자인 시스템.</p><div class="rs"><span class="bar"><i style="--w:22"></i></span><span class="sv">2.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/we-promise/sure"><i>we-promise/</i>sure</a><p>누구나 쓰도록 만든 개인 재무 관리 앱.</p><div class="rs"><span class="bar"><i style="--w:11"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openai/codex-security"><i>openai/</i>codex-security</a><p>보안 취약점을 찾고 검증·수정하는 OpenAI의 CLI 및 TypeScript SDK.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">1.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/shadcn/improve"><i>shadcn/</i>improve</a><p>상위 모델로 코드베이스를 점검해 저렴한 모델이 실행할 계획을 작성.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">1.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/homeassistant-ai/ha-mcp"><i>homeassistant-ai/</i>ha-mcp</a><p>Claude·ChatGPT 등 AI 비서로 Home Assistant를 설정·자동화.</p><div class="rs"><span class="bar"><i style="--w:6"></i></span><span class="sv">7.4k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/GoogleChrome/modern-web-guidance-src"><i>GoogleChrome/</i>modern-web-guidance-src</a><p>트렌딩 페이지에 설명이 표시되지 않았다.</p><div class="rs"><span class="bar"><i style="--w:2"></i></span><span class="sv">1.8k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 12일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-10">11월 10일</time><div><h4>Anthropic, IPO 로드쇼 시작</h4><p>Anthropic은 Class A 보통주 8억 2,500만 주(회사 발행 약 8억 135만 주, 기존 주주 매각 약 2,365만 주)에 대한 로드쇼를 시작했다고 밝혔다. 희망 공모가 범위는 주당 $70~$78, 상장 신청 시장은 Nasdaq Global Select Market(심볼 ANT)이다. 등록신고서는 SEC에 제출됐지만 아직 효력이 발생하지 않아 주식을 팔 수 없는 상태다. <a href="https://www.anthropic.com/news/roadshow-launch">Anthropic</a></p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Fable 5.2·Mythos 5.2 공개</h4><p>제11호에서 다룬 내용으로, 새로 알려진 추가 소식은 확인하지 못했다. <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models">Teaching AI to build scientific models</a><span class="tag">과학</span></h4><p>Jakob Macke 등이 과학적 모델링을 모델 구축·제약·해석 세 단계로 나누고 AI가 각 단계에 쓰이고 있다고 설명한다. 시뮬레이션 기반 추론은 최적값 하나가 아니라 데이터에 맞는 파라미터 범위 전체를 돌려준다고 한다. 같은 데이터를 설명하는 모델이 여럿일 수 있어, 초파리 뇌 같은 복잡계에서는 데이터와 맞는 모든 모델이 공유하는 성질을 찾는 것이 목표라고 주장한다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory</a><span class="tag">엔지니어링</span></h4><p>에이전트 메모리의 구성 요소를 다룬 글. 제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>제11호에서 다룬 글로, 이번에는 새로 확인한 내용이 없다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>Apple, Siri App Intents 개발자 프리뷰</h3><p>집계 자료에 따르면 Siri가 일부 범주가 아닌 모든 앱의 App Intents를 쓸 수 있게 되며, iOS 27.3 베타에서 제공된다. Apple 개발자 페이지 원문은 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>Incept5, inferd</h3><p>Mac에서 여러 에이전트를 동시에 돌리는 추론 엔진으로 Apache 2.0 오픈소스다. 집계에 따르면 32GB Mac Mini에서 Qwen 3.8 27B로 최대 16개 에이전트를 돌린다고 하며 이는 방송 중 주장이다.</p><p class="src"><a href="https://github.com/Incept5-AI/inferd">GitHub</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Pika H3 Flex, 오픈 웨이트 비디오 모델</h3><p>Pika는 H3 Flex가 DesignArena 텍스트→비디오 순위의 오픈 웨이트 1위라고 주장한다. 자체 주장이며 독립 확인은 하지 못했다.</p><p class="src"><a href="https://pika.art/pika-h3-flex">Pika</a></p></div>
+      <div><h3>MIT CSAIL, 가중치 공간 프로그래밍</h3><p>GPT-6 Astra가 Qwen3.5-0.8B 가중치의 0.016%를 직접 수정했고, 블로그에 따르면 MATH-500이 7.9%에서 48.1%로 올랐다. 기반 모델은 답의 93%에서 토큰 한도에 걸렸다고 한다.</p><p class="src"><a href="https://rikiyat.github.io/blog/weight-space-programming/">연구 블로그</a></p></div>
+      <div><h3>DeepSeek Harness, 플러그인 생성 모드</h3><p>채팅 프롬프트를 설치형 플러그인으로 바꾸는 Creator Mode가 추가됐다고 한다. 집계 자료는 기본 설정에서 에이전트 웹 검색이 DeepSeek을 거친다고 전한다.</p><p class="src"><a href="https://github.com/deepseek-ai/deepseek-harness">GitHub</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 12일에 웹 검색으로 수집한 보도를 한국어로 정리한 제12호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
