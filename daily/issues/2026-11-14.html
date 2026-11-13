@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제14호 (2026-11-14)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 14일 토요일</span><span>제14호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Anthropic, "안전성 평가에도 과학 연구 수준의 엄밀함을" 요구하는 글 공개</h2>
+    <p class="deck">Anthropic Engineering 팀이 11월 13일 안전성 평가(evals)를 설계하고 보고하는 방법에 대한 권고를 담은 글을 올렸다. 모델 배포와 안전장치 결정이 평가 결과에 달려 있으므로 평가 자체의 품질을 높여야 한다는 취지다.</p>
+    <div class="body">
+      <p>글은 안전성 평가가 쉽게 조작되고, 재현하기 어렵고, 엉뚱한 것을 재는 경우가 많다고 진단한다. 이를 개선하기 위한 권고의 일부는 심리학이 겪은 개혁에서 가져왔다고 밝힌다.</p>
+      <p>권고는 도메인 전문가와 방법론 전문가를 함께 팀에 두기, 위험한 시험은 샌드박스와 모니터링 아래에서 돌리기, 측정하려는 개념에 맞게 연구를 설계하기 등이다. 위기에 처한 사람에게 좋은 응답이 단순한 거절은 아니라는 예가 함께 나온다. 위험이 대화 전체에 걸쳐 나타나므로 다중 턴 시뮬레이션을 쓰라고도 한다.</p>
+      <p>AI 채점자는 사람의 라벨에 맞춰 보정하고, 분석 계획은 사전 등록하며, 불확실성과 전체 설정을 보고하고, 심각한 결함은 책임 있게 공개하라는 내용도 있다. 이 요약은 글의 일부만 읽고 정리한 것이며, 이 권고가 실제 평가에 어떻게 적용됐는지는 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Anthropic Research</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-09">11/9</time><span class="hl">Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Kimi K3.1 Pro<small>Moonshot AI (오픈 웨이트, MoE 2.8T)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Ripple-65B Preview<small>Ricursive (Apache 2.0)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Pika H3 Flex<small>Pika (오픈 웨이트, 텍스트→비디오)</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Hy4<small>Tencent</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>GPT-6 Cyber<small>OpenAI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">11월 9일 이후 새 모델은 확인하지 못했다. 출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI 11월 릴리스 집계</a> (2차 자료)</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><ul class="bul"><li>이번 조사에서 날짜와 버전을 공식 페이지로 확인한 새 릴리스는 <b>없음</b></li><li>검색 요약에 따르면 Chromium은 버전 155(11월 17일 예정)에서 XSLT 지원을 제거할 계획이다. 공식 문서는 <b>미확인</b></li></ul><p class="src">출처 <a href="https://singhajit.com/dev-weekly-microsoft-portugal-dotnet10-typescript-nov-10-16/">Dev Weekly (2차)</a></p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/louislam/uptime-kuma"><i>louislam/</i>uptime-kuma</a><p>셀프 호스팅 모니터링 도구.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">9.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ZhuLinsen/daily_stock_analysis"><i>ZhuLinsen/</i>daily_stock_analysis</a><p>시장 데이터와 뉴스를 쓰는 LLM 기반 다중 시장 주식 분석, 예약 실행 지원.</p><div class="rs"><span class="bar"><i style="--w:76"></i></span><span class="sv">7.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/alibaba/open-code-review"><i>alibaba/</i>open-code-review</a><p>결정적 파이프라인과 LLM 에이전트를 결합해 줄 단위 코멘트를 다는 코드 리뷰 도구.</p><div class="rs"><span class="bar"><i style="--w:54"></i></span><span class="sv">5.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/block/buzz"><i>block/</i>buzz</a><p>"하이브 마인드"를 표방한 커뮤니케이션 플랫폼.</p><div class="rs"><span class="bar"><i style="--w:40"></i></span><span class="sv">3.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/we-promise/sure"><i>we-promise/</i>sure</a><p>오픈소스 개인 재무 관리 앱.</p><div class="rs"><span class="bar"><i style="--w:16"></i></span><span class="sv">1.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openai/codex-security"><i>openai/</i>codex-security</a><p>보안 취약점을 찾고 검증·수정하는 CLI 및 TypeScript SDK.</p><div class="rs"><span class="bar"><i style="--w:14"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/backnotprop/plannotator"><i>backnotprop/</i>plannotator</a><p>에이전트 작업을 계획·주석·검토하고 피드백을 에이전트에 돌려주는 작업 공간.</p><div class="rs"><span class="bar"><i style="--w:11"></i></span><span class="sv">1.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/tailscale/tailcat"><i>tailscale/</i>tailcat</a><p>Tailscale 컨트롤 플레인 없이 데이터 플레인 위에서 도는 netcat 스타일 도구.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">9.4k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/GoogleChrome/modern-web-guidance-src"><i>GoogleChrome/</i>modern-web-guidance-src</a><p>코딩 에이전트가 최신 웹 모범 사례를 따르도록 돕는 가이드.</p><div class="rs"><span class="bar"><i style="--w:5"></i></span><span class="sv">4.8k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/tradermonty/claude-trading-skills"><i>tradermonty/</i>claude-trading-skills</a><p>주식 분석·차트·스크리닝을 다루는 투자자용 Claude Code 스킬.</p><div class="rs"><span class="bar"><i style="--w:4"></i></span><span class="sv">4.1k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 GitHub 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 14일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-10">11월 10일</time><div><h4>Anthropic, IPO 로드쇼 시작</h4><p>뉴스 목록의 최신 글이며 이전 호에서 다뤘다. 이후 새 발표는 목록에서 확인하지 못했다. <a href="https://www.anthropic.com/news/roadshow-launch">Anthropic</a></p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2·Mythos 5.2 공개</h4><p>이전 호에서 다룬 내용으로 추가 소식은 확인하지 못했다. <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>안전성 평가의 설계와 보고 방법에 대한 권고. 히어로 기사에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>실제 전자 회로 설계 과제로 Claude를 시험한 글. 제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models">Teaching AI to build scientific models</a><span class="tag">과학</span></h4><p>AI가 과학 모델을 만들도록 가르치는 연구. 제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory</a><span class="tag">엔지니어링</span></h4><p>에이전트 메모리의 구성 요소를 다룬 글. 제목과 목록 정보만 확인했다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>이번 조사에서 확인한 신제품 없음</h3><p>11월 집계 자료에는 기기·칩 발표가 없었고, 가장 가까운 항목은 Mac용 오픈소스 추론 엔진 inferd(Incept5, Apache 2.0)였다. 원문은 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Tencent, Hy4</h3><p>집계 자료는 비전, 컴퓨터 사용, 100만 토큰 컨텍스트를 갖춘 모델이라고 소개한다. 공식 원문과 벤치마크는 미확인이다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>Incept5, inferd</h3><p>여러 에이전트를 동시에 돌리는 Mac용 추론 엔진이며 Apache 2.0이라고 한다. 성능 수치는 확인하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>OpenAI, 리눅스 커널 익스플로잇 연구</h3><p>집계에 따르면 자율 에이전트 실행에서 작동하는 리눅스 커널 루트 익스플로잇 948개가 나왔다. 검증 방식과 원문은 미확인이다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 14일에 웹 검색으로 수집한 보도를 한국어로 정리한 제14호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
