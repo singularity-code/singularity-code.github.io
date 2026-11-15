@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제16호 (2026-11-16)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 16일 월요일</span><span>제16호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Thinking Machines Lab, Inkling 2 Small 가중치를 Apache 2.0으로 공개</h2>
+    <p class="deck">Thinking Machines Lab이 11월 12일 594B 파라미터 MoE 모델 Inkling 2 Small의 전체 가중치를 Hugging Face에 올렸다. 11월 5일 호스팅 전용으로 먼저 나온 모델이다.</p>
+    <div class="body">
+      <p>집계 자료에 따르면 이 모델은 전체 594B, 활성 17B 파라미터의 MoE 구조이고 이미지 입력과 추론 강도 조절을 지원한다. 체크포인트는 36개 파일, 393.5GB다. 라이선스는 Apache 2.0이다.</p>
+      <p>공개는 외부 안전·레드팀 테스트를 거친 뒤에 이뤄졌다고 한다. 처음에는 Tinker에서 호스팅으로만 제공됐고, 가중치 공개 이후 Together AI, Fireworks, Baseten, Nebius, Modal, Cloudflare가 추론을 제공하며 Unsloth, SGLang, vLLM도 지원한다고 전해진다.</p>
+      <p>다만 이 내용은 2차 집계 기사를 통해 확인했고 Thinking Machines의 공식 페이지는 직접 열람하지 못했다. 성능 수치와 독립 평가도 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://aiweekly.co/ai-news-today">AI Weekly (2차)</a>, <a href="https://thinkingmachines.ai/news/inkling-2-small/">Thinking Machines (집계 기사가 인용, 미열람)</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-12">11/12</time><span class="hl">Inkling 2 Small (가중치 공개)<small>Thinking Machines Lab</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>Gemini 4 Carbon (정식 공개)<small>Google</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>H3-Image<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-06">11/6</time><span>Arete-27B<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">출처 <a href="https://aiweekly.co/ai-news-today">AI Weekly (2차)</a>, 이전 호</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>이번 조사에서 날짜와 버전을 공식 페이지로 확인한 새 릴리스는 없음.</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/ChromeDevTools/chrome-devtools-mcp"><i>ChromeDevTools/</i>chrome-devtools-mcp</a><p>코딩 에이전트가 Chrome DevTools에 접근하게 해 주는 MCP 서버.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">5.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/alibaba/open-code-review"><i>alibaba/</i>open-code-review</a><p>결정적 파이프라인과 LLM 에이전트를 결합한 하이브리드 코드 리뷰 도구.</p><div class="rs"><span class="bar"><i style="--w:91"></i></span><span class="sv">5.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/dream-num/univer"><i>dream-num/</i>univer</a><p>AI 에이전트용을 포함해 오피스 편집·계산·협업 기능을 제품에 넣는 오픈소스 SDK.</p><div class="rs"><span class="bar"><i style="--w:45"></i></span><span class="sv">2.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ag-ui-protocol/ag-ui"><i>ag-ui-protocol/</i>ag-ui</a><p>에이전트를 프런트엔드 앱에 연결하는 프로토콜.</p><div class="rs"><span class="bar"><i style="--w:31"></i></span><span class="sv">1.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ggml-org/ggml"><i>ggml-org/</i>ggml</a><p>머신러닝용 텐서 라이브러리.</p><div class="rs"><span class="bar"><i style="--w:28"></i></span><span class="sv">1.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/backnotprop/plannotator"><i>backnotprop/</i>plannotator</a><p>코드를 계획·주석·검토하고 피드백을 에이전트에 보내는 작업 공간.</p><div class="rs"><span class="bar"><i style="--w:21"></i></span><span class="sv">1.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google-labs-code/stitch-skills"><i>google-labs-code/</i>stitch-skills</a><p>Stitch MCP 서버와 여러 코딩 에이전트에서 쓰는 에이전트 스킬 모음.</p><div class="rs"><span class="bar"><i style="--w:16"></i></span><span class="sv">9.3k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/GoogleChrome/modern-web-guidance-src"><i>GoogleChrome/</i>modern-web-guidance-src</a><p>코딩 에이전트가 최신 웹 모범 사례를 따르도록 돕는 가이드.</p><div class="rs"><span class="bar"><i style="--w:12"></i></span><span class="sv">7.1k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 헌팅과 외부 레드팀 작업용 Claude Code 스킬 묶음.</p><div class="rs"><span class="bar"><i style="--w:11"></i></span><span class="sv">6.4k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/Tencent/LoopForge"><i>Tencent/</i>LoopForge</a><p>스크립트와 사람 승인 단계로 코딩 에이전트를 엮는 셀프 호스팅 워크플로.</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">1.4k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 16일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-10">11월 10일</time><div><h4>Anthropic, IPO 로드쇼 시작</h4><p>뉴스 목록의 최신 글이며 이전 호에서 다뤘다. 이후 새 발표는 목록에서 확인하지 못했다. <a href="https://www.anthropic.com/news/roadshow-launch">Anthropic</a></p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2·Mythos 5.2 공개</h4><p>이전 호에서 다룬 내용으로 추가 소식은 확인하지 못했다. <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>안전성 평가 설계·보고 권고. 이전 호에서 다뤘고, 이후 새 글은 목록에 없다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>제목과 목록 정보만 확인했다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/components-of-agent-memory">The components of agent memory</a><span class="tag">엔지니어링</span></h4><p>제목과 목록 정보만 확인했다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>이번 조사에서 확인한 신제품 없음</h3><p>검색에서는 Nordic Semiconductor의 nRF71 시리즈(11월 3일 발표)와 Qualcomm의 Snapdragon 8 Elite Gen 6가 언급됐으나, 날짜와 사양을 원문으로 확인하지 못해 다루지 않는다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Cursor 마켓플레이스 침해</h3><p>11월 14일 보도에 따르면 Fireworks AI에서 탈취된 키로 10월 29일 Cursor 마켓플레이스에 악성 Claude Code 확장 복제본이 올라갔고, 최대 5,000명의 개발자가 내려받았을 수 있다. 1차 원문은 열람하지 못했다.</p><p class="src"><a href="https://www.bleepingcomputer.com/news/security/cursor-confirms-security-breach-led-to-malicious-claude-code-extension">BleepingComputer (2차 인용)</a></p></div>
+      <div><h3>Lovable 앱 데이터베이스 노출</h3><p>Crissy Field가 Handelsblatt와 함께 159,041개 프로젝트를 조사해, 24,664개 사이트의 Supabase 데이터베이스가 인증 없이 읽힌다고 밝혔다고 한다. 조사 원문은 열람하지 못했다.</p><p class="src"><a href="https://www.crissyfield.de/research/lovable-en/">Crissy Field (2차 인용)</a></p></div>
+      <div><h3>Apple 스마트 글래스, 2027년 예정설</h3><p>Mark Gurman 보도에 따르면 Apple은 첫 스마트 글래스(코드명 N50)를 2027년 6월 WWDC에서 공개하고 2027년 말 이전에 출시할 계획이다. Apple의 공식 발표는 없고 보도 기반이다.</p><p class="src"><a href="https://9to5mac.com/2026/11/15/apples-siri-ai-smart-glasses-are-reportedly-launching-next-year-heres-what-to-expect/">9to5Mac (2차 인용)</a></p></div>
+      <div><h3>미 법무부, 북한 연계 FaceStealer 캠페인 차단</h3><p>집계에 따르면 BlueNoroff의 소행으로 보는 18개월짜리 캠페인의 인프라를 압수했으며, 암호화폐 탈취액은 4억 달러 이상이라고 한다. 수치는 보도 기준이며 직접 확인하지 못했다.</p><p class="src"><a href="https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/">BleepingComputer (2차 인용)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 16일에 웹 검색으로 수집한 보도를 한국어로 정리한 제16호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
