@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제17호 (2026-11-17)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 17일 화요일</span><span>제17호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Anthropic, 취약점 공개 정책의 기한을 90일에서 30일로 단축</h2>
+    <p class="deck">Anthropic이 11월 16일 조율된 취약점 공개(CVD) 정책의 타임라인을 줄였다. AI 덕분에 취약점이 더 쉽게, 더 자주 독립적으로 발견되기 때문이라는 설명이다.</p>
+    <div class="body">
+      <p>고위험·치명적 등급 취약점의 공개 기한은 90일에서 30일로, 그 외 등급은 45일로 짧아진다. 유지관리자가 응답하지 않을 때 외부 조정 기관에 넘기는 시점은 30일에서 15일로, 패치 이후 기술 세부 정보를 전부 공개하는 시점은 45일에서 30일로 당겨진다. 이미 악용 중인 취약점에 적용되는 7일 기한은 그대로다.</p>
+      <p>새 기한은 2027년 1월 1일 이후 보고된 취약점부터 적용되며, 진행 중인 건은 기존 기한을 따른다. 90일을 넘겼는데 아직 공개되지 않은 고위험 건은 유지관리자에게 30일을 더 주고, 그 뒤 2027년 1월 1일부터 Anthropic 대시보드에 게시한다.</p>
+      <p>예외도 있다. 핵심 인프라처럼 배포가 어렵거나 사양·RFC 변경이 필요한 결함은 공급사와 협의한 별도 일정을 둘 수 있고, 사람의 검토를 거치지 않은 AI 발견 결과(예: OSS Scanner)에는 이 정책이 적용되지 않는다. 이 글은 Anthropic 자체 발표 한 건을 근거로 했으며 외부 반응은 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Anthropic Research</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-12">11/12</time><span>Inkling 2 Small (가중치 공개)<small>Thinking Machines Lab</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>Gemini 4 Carbon (정식 공개)<small>Google</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>H3-Image<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-06">11/6</time><span>Arete-27B<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">새로 확인한 모델은 없어 이전 호 목록을 유지했다. 출처 <a href="https://www.anthropic.com/news">Anthropic</a>, 이전 호</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>이번 조사에서 날짜와 버전을 공식 페이지로 확인한 새 릴리스는 없음.</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 소셜·웹 소스에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">6.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/alibaba/open-code-review"><i>alibaba/</i>open-code-review</a><p>규칙 기반 파이프라인과 LLM 에이전트를 결합해 줄 단위 코멘트를 다는 코드 리뷰 도구.</p><div class="rs"><span class="bar"><i style="--w:78"></i></span><span class="sv">5.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/dream-num/univer"><i>dream-num/</i>univer</a><p>사람과 AI 에이전트를 위한 편집·계산·협업 기능을 제품에 넣는 오픈소스 SDK.</p><div class="rs"><span class="bar"><i style="--w:41"></i></span><span class="sv">2.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ag-ui-protocol/ag-ui"><i>ag-ui-protocol/</i>ag-ui</a><p>에이전트를 프런트엔드 앱에 연결하는 프로토콜.</p><div class="rs"><span class="bar"><i style="--w:28"></i></span><span class="sv">1.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/backnotprop/plannotator"><i>backnotprop/</i>plannotator</a><p>에이전트 작업을 계획·주석·검토하고 피드백을 에이전트에 돌려주는 작업 공간.</p><div class="rs"><span class="bar"><i style="--w:18"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google-labs-code/stitch-skills"><i>google-labs-code/</i>stitch-skills</a><p>Stitch MCP 서버와 함께 쓰는 에이전트 스킬 라이브러리.</p><div class="rs"><span class="bar"><i style="--w:14"></i></span><span class="sv">9.8k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/getarcaneapp/arcane"><i>getarcaneapp/</i>arcane</a><p>누구나 쓰기 쉽게 만든 Docker 관리 도구.</p><div class="rs"><span class="bar"><i style="--w:13"></i></span><span class="sv">8.8k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/DeanChensj/jiangshan-map"><i>DeanChensj/</i>jiangshan-map</a><p>여러 왕조의 타임라인과 시 경로를 담은 중국 역사 인터랙티브 지도.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">6.9k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/tradermonty/claude-trading-skills"><i>tradermonty/</i>claude-trading-skills</a><p>시장 분석·차트·경제 일정·스크리닝용 Claude Code 스킬.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">6.4k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/NVIDIA/SkillEvaluator"><i>NVIDIA/</i>SkillEvaluator</a><p>품질 게이트와 실제 에이전트 테스트로 스킬·플러그인을 평가하는 프레임워크.</p><div class="rs"><span class="bar"><i style="--w:4"></i></span><span class="sv">2.8k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 17일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-10">11월 10일</time><div><h4>Anthropic, IPO 로드쇼 시작</h4><p>뉴스 목록의 최신 글이며 이전 호에서 다뤘다. 이후 새 발표는 목록에서 확인하지 못했다. <a href="https://www.anthropic.com/news/roadshow-launch">Anthropic</a></p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2·Mythos 5.2 공개</h4><p>이전 호에서 다룬 내용으로 추가 소식은 확인하지 못했다. <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-16">11월 16일</time><div><h4><a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Updating our coordinated vulnerability disclosure policy timelines</a><span class="tag">엔지니어링</span></h4><p>취약점 공개 기한을 줄인 정책 개정. 위 헤드라인 기사에서 다뤘다. 목록상 분류는 Frontier Red Team.</p></div></li>
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>안전성 평가 설계·보고 권고. 이전 호에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>제목과 목록 정보만 확인했다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>이번 조사에서 확인한 신제품 없음</h3><p>기기·칩 발표는 날짜와 사양을 원문으로 확인하지 못했다. Gemini 4 Hydrogen은 내부 테스트 코드명 보도만 있고 Google의 공식 발표는 찾지 못해 다루지 않는다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Gemini 4 Hydrogen은 미공개</h3><p>Flash급 Gemini 4의 내부 코드명이라는 보도가 있다. 공개 API나 앱에는 아직 모델 ID가 없고 Google의 공식 확인도 찾지 못했다.</p><p class="src"><a href="https://kie.ai/blog/what-is-gemini-4-hydrogen">kie.ai (2차)</a></p></div>
+      <div><h3>Cloudflare Clairic 아직 공개 전</h3><p>추출용 모델 Clairic의 Apache 2.0 공개가 예정돼 있으나 가중치는 아직 나오지 않았다고 한다. 원문은 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>CoreWeave 3분기 매출</h3><p>집계 자료는 매출 36.6억 달러로 전년 대비 168% 증가, 가이던스 상향이라고 전한다. 공식 실적 자료는 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 17일에 웹 검색으로 수집한 보도를 한국어로 정리한 제17호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
