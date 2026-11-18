@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제18호 (2026-11-18)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 18일 수요일</span><span>제18호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Google, Gemini 4 Hydrogen을 정식 공개하고 Antigravity 기본 모델로 지정</h2>
+    <p class="deck">Google의 Gemini API 릴리스 노트에 따르면 gemini-4-hydrogen이 11월 12일 정식 출시됐다. 이전 호에서 "내부 코드명 보도뿐"이라고 했던 모델이 공식 확인된 것이다.</p>
+    <div class="body">
+      <p>릴리스 노트는 이 모델이 무료 티어에서 쓸 수 있고, 유료 가격은 입력 100만 토큰당 1.50달러, 출력 100만 토큰당 7.50달러라고 밝힌다. 새로 추가된 xhigh 사고 수준을 지원하며, Gemini Managed Agents 안의 Antigravity 에이전트의 기본 모델이 됐다. Gemini 3.8 Flash에서 옮겨 가는 방법을 안내하는 마이그레이션 문서도 링크돼 있다.</p>
+      <p>같은 주에 Google은 11월 10일 Gemini 4 Carbon을 정식 출시(11월 30일까지 입력 2달러·출력 10달러의 도입 가격)했고, 11월 11일에는 이진·범주·루브릭 판단용 Gemini Decision 1과 Decisions API를 내놓았다. 이 API는 텍스트·이미지·오디오·비디오·PDF를 입력으로 받으며 출력 토큰이 0이라고 적혀 있다.</p>
+      <p>성능 비교나 벤치마크는 릴리스 노트에 없어 이 글에서도 다루지 않는다. 독립 검증 결과도 확인하지 못했다. 또 11월 2일 공지에 따라 Gemini 2.5 Pro·Flash는 12월 1일부터 각각 Gemini 3.8 Flash·3.5 Flash-Lite로 라우팅되며, 함수 호출 등에서 호환성이 깨지는 변경이 있다고 한다.</p>
+      <p class="src">출처 <a href="https://aistudio.google.com/docs/changelog">Google AI Studio 릴리스 노트</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-12">11/12</time><span class="hl">Gemini 4 Hydrogen (정식 공개)<small>Google</small></span></li>
+      <li><time datetime="2026-11-11">11/11</time><span>Gemini Decision 1<small>Google</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Inkling 2 Small (가중치 공개)<small>Thinking Machines Lab</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>Gemini 4 Carbon (정식 공개)<small>Google</small></span></li>
+      <li><time datetime="2026-11-10">11/10</time><span>H3-Image<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+      <li><time datetime="2026-11-06">11/6</time><span>Arete-27B<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-05">11/5</time><span>Kimi K3.1 Pro<small>Moonshot AI</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">Google 항목은 공식 릴리스 노트, 나머지는 이전 호 목록. 출처 <a href="https://aistudio.google.com/docs/changelog">Google AI Studio</a></p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>이번 조사에서 새로 발표된 순위는 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><ul class="bul"><li>Gemini API: <code>gemini-embedding-2-preview</code> 지원 중단, <code>gemini-embedding-2</code>로 라우팅(모델 문자열만 바꾸면 되고 재색인 불필요)</li><li>Gemini API: Gemini Omni 1.2 Flash 정식 출시, Omni 1.1 Flash 요청은 12월 3일부터 1.2 Flash로 라우팅</li></ul><p class="src"><a href="https://aistudio.google.com/docs/changelog">Google AI Studio 릴리스 노트</a></p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/obra/superpowers"><i>obra/</i>superpowers</a><p>에이전트용 스킬 프레임워크이자 소프트웨어 개발 방법론.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">31.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 소셜·웹 소스에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:22"></i></span><span class="sv">6.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/alibaba/open-code-review"><i>alibaba/</i>open-code-review</a><p>규칙 기반 파이프라인과 LLM 에이전트를 결합한 코드 리뷰 도구.</p><div class="rs"><span class="bar"><i style="--w:17"></i></span><span class="sv">5.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/dream-num/univer"><i>dream-num/</i>univer</a><p>제품에 오피스 편집·계산·협업 기능을 넣는 SDK.</p><div class="rs"><span class="bar"><i style="--w:9"></i></span><span class="sv">2.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/ag-ui-protocol/ag-ui"><i>ag-ui-protocol/</i>ag-ui</a><p>에이전트를 프런트엔드 앱에 연결하는 프로토콜.</p><div class="rs"><span class="bar"><i style="--w:6"></i></span><span class="sv">2.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cursor/plugins"><i>cursor/</i>plugins</a><p>Cursor 플러그인 사양과 공식 플러그인 모음.</p><div class="rs"><span class="bar"><i style="--w:5"></i></span><span class="sv">1.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/google-labs-code/stitch-skills"><i>google-labs-code/</i>stitch-skills</a><p>Stitch MCP 서버와 함께 쓰는 에이전트 스킬 라이브러리.</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">1.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/getarcaneapp/arcane"><i>getarcaneapp/</i>arcane</a><p>쓰기 쉬운 Docker 관리 앱.</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">9.3k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 헌팅·레드팀 작업용 Claude Code 스킬. 오늘 하루 스타 증가가 가장 컸다(+1,005).</p><div class="rs"><span class="bar"><i style="--w:3"></i></span><span class="sv">9.3k</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/Tencent/LoopForge"><i>Tencent/</i>LoopForge</a><p>사람의 승인 단계를 둔 채 코딩 에이전트를 조율하는 자체 호스팅 워크플로.</p><div class="rs"><span class="bar"><i style="--w:1"></i></span><span class="sv">3.2k</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 18일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-17">11월 17일</time><div><h4>Claude Desktop, 릴리스 채널 선택 가능</h4><p>Stable(기본, 업데이트가 드물고 테스트를 더 거침)과 Latest(약 하루 한 번 새 버전) 중 고를 수 있다. <a href="https://support.claude.com/en/articles/12138966-release-notes">Claude 릴리스 노트</a></p></div></li>
+      <li><time datetime="2026-11-12">11월 12일</time><div><h4>Claude Meetings 베타</h4><p>Team·Enterprise 요금제에서 Claude가 Google Meet 통화에 참가자로 들어가 노트를 작성하고 질문에 답하며 문서·화이트보드·슬라이드 같은 아티팩트를 만든다. <a href="https://support.claude.com/en/articles/12138966-release-notes">Claude 릴리스 노트</a></p></div></li>
+      <li><time datetime="2026-11-10">11월 10일</time><div><h4>Anthropic, IPO 로드쇼 시작</h4><p>뉴스 목록의 최신 글이며 이전 호에서 다뤘다. <a href="https://www.anthropic.com/news/roadshow-launch">Anthropic</a></p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-16">11월 16일</time><div><h4><a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Updating our coordinated vulnerability disclosure policy timelines</a><span class="tag">엔지니어링</span></h4><p>취약점 공개 기한 단축 정책. 11월 17일 호의 헤드라인이었고, 목록상 분류는 Frontier Red Team.</p></div></li>
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>안전성 평가 설계·보고 권고. 이전 호에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>제목과 목록 정보만 확인했다. 목록에 이보다 새로운 글은 없다.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>이번 조사에서 확인한 기기·칩 발표 없음</h3><p>날짜와 사양을 원문으로 확인한 기기·칩 소식은 찾지 못했다. 개발자 도구 쪽 신제품은 위 Gemini Decisions API와 Claude Meetings를 참고.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Gemini 2.5 Pro·Flash 12월 1일 라우팅 전환</h3><p>Google은 11월 2일 두 모델을 지원 중단하고 12월 1일부터 요청을 Gemini 3.8 Flash와 3.5 Flash-Lite로 보낸다고 했다. 함수 호출, 사고 서명 검증, 샘플링 파라미터에서 호환성이 깨지므로 점검이 필요하다.</p><p class="src"><a href="https://aistudio.google.com/docs/changelog">Google AI Studio</a></p></div>
+      <div><h3>Cloudflare Clairic 가중치는 아직</h3><p>추출용 모델 Clairic의 Apache 2.0 공개는 아직 대기 중이라는 2차 집계가 있다. 원문은 확인하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>MiniMax H3-Image</h3><p>4K 이미지를 만드는 모델로 가중치가 Hugging Face에 공개됐다고 집계 사이트가 전한다. 개발사 원문은 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 18일에 웹 검색으로 수집한 보도를 한국어로 정리한 제18호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
