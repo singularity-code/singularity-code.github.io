@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제20호 (2026-11-20)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 20일 금요일</span><span>제20호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Rust 1.100.0, 10년 만에 never 타입(!) 안정화</h2>
+    <p class="deck">11월 12일 나온 Rust 1.100.0에서 never 타입과 Allocator API가 안정화됐고, Cargo에는 미사용 의존성 경고와 의존성 쿨다운 설정이 들어왔다. 이어 11월 16일에는 nightly에서 병렬 프런트엔드가 기본으로 켜졌다.</p>
+    <div class="body">
+      <p>공식 릴리스 글에 따르면 never 타입(<code>!</code>)을 어디서든 이름으로 쓸 수 있게 되었고 <code>Infallible</code>은 그 별칭이 됐다. 2024 이전 에디션의 never 타입 폴백이 바뀌어 일부 코드가 깨질 수 있다고 경고한다. 핵심 <code>Allocator</code> 트레이트도 안정화되어 <code>Vec</code>·<code>Box</code>에 사용자 정의 할당자를 쓸 수 있다.</p>
+      <p>Cargo는 <code>[lints.cargo]</code> 체계로 쓰지 않는 의존성을 알려 주고, <code>global-min-publish-age</code> 설정으로 갓 게시된 버전을 건너뛸 수 있다(<code>cargo install</code>은 이 설정을 무시한다). build-dir 해시 적용 방식이 바뀌어 기존 빌드 우회책이 깨질 수 있다. 새 안정 API로는 <code>Vec::from_fn</code>, <code>str::trim_prefix</code>/<code>trim_suffix</code>, <code>bool::toggle</code> 등이 있다.</p>
+      <p>이번 조사에서 모델 쪽은 11월 13일 이후 새로 확인된 공개 소식이 없어, 기술 기사 중 새로 확인한 이 릴리스를 톱으로 골랐다. 오른쪽 모델 목록은 이전 호 이후 갱신분이 없다.</p>
+      <p class="src">출처 <a href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/">Rust Blog</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-12">11/12</time><span>Gemini 4 Hydrogen · Carbon (정식 공개)<small>Google DeepMind</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Arete-27B (가중치 공개)<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>MiniMax H3-Image (가중치 공개)<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Muse Ember (비공개 가중치)<small>Meta</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Clairic (Apache 2.0 공개 예정)<small>Cloudflare</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span class="hl">Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">11월 13~20일에 새로 공개된 모델은 집계 사이트에서도 확인하지 못했다. 날짜는 집계 사이트(2차) 기준이며 Claude 날짜만 Anthropic 공지 기준이다. 출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a>, <a href="https://www.anthropic.com/news">Anthropic</a></p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>Rust 컴파일러, nightly에서 병렬 프런트엔드 기본 활성화</h3><p>nightly-2026-11-14부터 타입 검사·빌림 검사를 맡는 프런트엔드가 기본 2스레드로 돈다. 팀 벤치마크에서 단일 크레이트 <code>cargo check</code>의 벽시계 시간은 8스레드에서 평균 44% 줄었고, 전체 크레이트 그래프에서는 코어가 이미 바쁘기 때문에 이득이 15% 안팎이었다. 진단 순서가 비결정적이거나 바이너리가 재현되지 않는 경우가 있어 팀이 버그로 보고 있고, 안정 채널은 아직 순차 방식이다. TIOBE 등 새 언어 순위 발표는 이번에 확인하지 못했다.</p><p class="src">출처 <a href="https://blog.rust-lang.org/2026/11/16/enabling-parallel-frontend-on-nightly/">Rust Blog</a></p></div>
+      <div><h3>그 밖의 릴리스</h3><ul class="bul"><li>Go 1.27.4 / 1.26.11 보안 릴리스, CVE-2026-97034 (2차 보도, 공식 공지는 미확인) <code>go1.27.4</code></li><li>rustup 1.29.3 (11월 3일, 이전 호에는 없던 항목) <code>rustup 1.29.3</code></li></ul><p class="src"><a href="https://blog.rust-lang.org/">Rust Blog</a></p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 사냥과 외부 레드팀 작업용 Claude Code 스킬 묶음. 오늘 하루 스타 증가 +1,349.</p><div class="rs"><span class="bar"><i style="--w:3.9"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/obra/superpowers"><i>obra/</i>superpowers</a><p>소프트웨어 개발용 에이전트 스킬 프레임워크와 방법론. 오늘 하루 스타 증가 +2,028로 가장 컸다.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">32.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/firecrawl/firecrawl"><i>firecrawl/</i>firecrawl</a><p>AI 에이전트가 검색·스크래핑·데이터 제공자를 한 API로 쓰게 해 주는 도구.</p><div class="rs"><span class="bar"><i style="--w:63.4"></i></span><span class="sv">20.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 소스에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:22"></i></span><span class="sv">7.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cathrynlavery/diagram-design"><i>cathrynlavery/</i>diagram-design</a><p>AI 코딩 도구용 편집 스타일 다이어그램 스킬. HTML·SVG로 출력한다.</p><div class="rs"><span class="bar"><i style="--w:21.3"></i></span><span class="sv">6.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/jingyaogong/minimind"><i>jingyaogong/</i>minimind</a><p>64M 파라미터 LLM을 약 2시간에 처음부터 학습시키는 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:20.8"></i></span><span class="sv">6.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/HKUDS/CLI-Anything"><i>HKUDS/</i>CLI-Anything</a><p>기존 소프트웨어를 CLI로 감싸 AI 에이전트가 쓸 수 있게 한다.</p><div class="rs"><span class="bar"><i style="--w:18.8"></i></span><span class="sv">6.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/nginx/nginx"><i>nginx/</i>nginx</a><p>NGINX 오픈소스 웹 서버 공식 저장소.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">3.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cursor/plugins"><i>cursor/</i>plugins</a><p>Cursor 플러그인 사양과 공식 플러그인 모음.</p><div class="rs"><span class="bar"><i style="--w:5.5"></i></span><span class="sv">1.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openvinotoolkit/openvino"><i>openvinotoolkit/</i>openvino</a><p>AI 추론을 최적화·배포하는 툴킷.</p><div class="rs"><span class="bar"><i style="--w:3.6"></i></span><span class="sv">1.2만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준. 막대는 목록 내 최대값 대비. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 20일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-18">11월 18일</time><div><h4>Anthropic, IPO 가격 확정</h4><p>뉴스 목록의 최신 글로, 이전 호에서 다뤘다. 11월 20일 날짜 머리글은 있으나 아직 글이 없어, 그 이후 새 공지는 확인하지 못했다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2와 Mythos 5.2 공개</h4><p>이전 호에서 다룬 제품 발표다.</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-17">11월 17일</time><div><h4><a href="https://www.anthropic.com/research/claude-black-hole-physics">Claude solves two open problems in the physics of black holes</a><span class="tag">과학</span></h4><p>목록 최상단 글이며 이전 호에서 다뤘다. 이후 새 연구 글은 올라오지 않았다.</p></div></li>
+      <li><time datetime="2026-11-16">11월 16일</time><div><h4><a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Updating our coordinated vulnerability disclosure policy timelines</a><span class="tag">엔지니어링</span></h4><p>취약점 공개 기한 정책 갱신. 목록상 분류는 Frontier Red Team이다.</p></div></li>
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>안전성 평가 설계와 보고에 관한 글.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>Claude를 실제 전자 회로 설계 과제에 시험한 글. 본문은 열람하지 않아 결과는 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>새로 확인한 기기·칩 없음</h3><p>이번 조사에서는 11월 19일 호 이후 새로 공개된 기기나 칩을 확인하지 못했다. 억지로 채우지 않고 비워 둔다. 직전 호의 Apple HomeView(299달러)와 Apple TV 4K는 11월 13일 출시 건이다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>ANT, 첫 거래일 마감</h3><p>2차 집계에 따르면 Anthropic은 11월 19일 첫 거래가를 공모가 83달러보다 높은 111.50달러에 형성했고 종가는 97.17달러였다. 이 호는 투자 의견을 다루지 않는다.</p><p class="src"><a href="https://www.stocktitan.net/articles/anthropic-ipo-live-ant-first-trading-day-2026">Stock Titan (2차)</a></p></div>
+      <div><h3>Cloudflare Clairic</h3><p>집계 사이트가 11월 12일자로 올린 모델이다. 지금은 가중치가 풀리지 않았고 Apache 2.0 공개가 예정돼 있다고 적혀 있다. 공개 시점과 성능은 미확인.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>Cargo 의존성 쿨다운</h3><p>Cargo의 <code>global-min-publish-age</code>는 새로 게시된 버전을 건너뛰는 설정으로, 1.100.0에서 들어왔다. <code>cargo install</code>에는 적용되지 않는다.</p><p class="src"><a href="https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/">Rust Blog</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 20일에 웹 검색으로 수집한 보도를 한국어로 정리한 제20호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
