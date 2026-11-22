@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제23호 (2026-11-23)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 23일 월요일</span><span>제23호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">새 모델 공개 없는 월요일… 11월 12일 이후 확인된 신규 공개는 없다</h2>
+    <p class="deck">이번 조사에서 11월 18일 이후 날짜가 붙은 새 모델 공개는 찾지 못했다. 그래서 오늘 호는 새 소식을 억지로 만들지 않고, 확인된 범위만 짧게 전한다.</p>
+    <div class="body">
+      <p>AI 릴리스를 모아 보여 주는 ThursdAI의 11월 목록에는 11월 5일과 11월 12일 항목만 있고, 그 이후 날짜의 항목은 없었다. 목록이 아직 갱신되지 않았을 수도 있어서 "공개가 없었다"가 아니라 "확인하지 못했다"로 읽어야 한다.</p>
+      <p>검색에서는 Moonshot AI의 Kimi K3.1 Pro가 11월 4일 Apache 2.0으로 가중치를 공개했다는 2차 보도가 나왔다. ThursdAI 정리는 이 모델을 2.8T 파라미터 MoE(활성 104B), 1M 토큰 컨텍스트라고 소개한다. 다만 개발사 공지를 직접 확인하지 못했고 수치도 2차 출처 기준이라, 아래 목록에는 올리지 않았다(미확인).</p>
+      <p class="src">출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI 11월 릴리스 목록</a> (2차)</p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-17">11/17</time><span class="hl">GPT-6.2 Astra / Sol<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Gemini 4 Hydrogen · Carbon (정식 공개)<small>Google DeepMind</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Arete-27B (가중치 공개)<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>MiniMax H3-Image (가중치 공개)<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Clairic (Apache 2.0 공개 예정)<small>Cloudflare</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">목록은 지난 호와 같다. 출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI</a> (2차)</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>TIOBE 등 새 순위 발표는 이번에도 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>Rust 블로그의 최신 글은 11월 16일 nightly 병렬 프런트엔드 건이고, 직전 정식 릴리스는 11월 12일 Rust 1.100.0이다. 모두 이전 호에서 다뤘으며 새로 확인한 릴리스는 없다.</p><p class="src"><a href="https://blog.rust-lang.org/">Rust Blog</a></p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 사냥·외부 레드팀용 Claude Code 스킬 묶음. 오늘 하루 스타 +1,721.</p><div class="rs"><span class="bar"><i style="--w:5.5"></i></span><span class="sv">1.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/obra/superpowers"><i>obra/</i>superpowers</a><p>에이전트 스킬 프레임워크와 소프트웨어 개발 방법론.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">32.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/firecrawl/firecrawl"><i>firecrawl/</i>firecrawl</a><p>검색·스크래핑·데이터 제공자 550여 곳을 한 API로 제공.</p><div class="rs"><span class="bar"><i style="--w:63.9"></i></span><span class="sv">20.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 플랫폼에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:22.4"></i></span><span class="sv">7.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cathrynlavery/diagram-design"><i>cathrynlavery/</i>diagram-design</a><p>코딩 에이전트용 편집 스타일 다이어그램 스킬. 다이어그램 유형 45종.</p><div class="rs"><span class="bar"><i style="--w:21.7"></i></span><span class="sv">7.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/jingyaogong/minimind"><i>jingyaogong/</i>minimind</a><p>64M 파라미터 LLM을 약 2시간에 처음부터 학습시키는 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:21.2"></i></span><span class="sv">6.9만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/HKUDS/CLI-Anything"><i>HKUDS/</i>CLI-Anything</a><p>소프트웨어를 CLI로 감싸 에이전트가 쓸 수 있게 한다.</p><div class="rs"><span class="bar"><i style="--w:19.4"></i></span><span class="sv">6.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/nginx/nginx"><i>nginx/</i>nginx</a><p>NGINX 오픈소스 웹 서버 공식 저장소.</p><div class="rs"><span class="bar"><i style="--w:10.1"></i></span><span class="sv">3.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cursor/plugins"><i>cursor/</i>plugins</a><p>Cursor 플러그인 사양과 공식 플러그인 모음.</p><div class="rs"><span class="bar"><i style="--w:5.7"></i></span><span class="sv">1.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openvinotoolkit/openvino"><i>openvinotoolkit/</i>openvino</a><p>AI 추론을 최적화·배포하는 오픈소스 툴킷.</p><div class="rs"><span class="bar"><i style="--w:3.7"></i></span><span class="sv">1.2만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준이며 막대는 목록 내 최대값 대비. 출처 <a href="https://github.com/trending?since=daily">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 23일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-20">11월 20일</time><div><h4>Anthropic, IPO 마감 발표</h4><p>뉴스 목록의 최신 글로, 이전 호에서 다뤘다. 이후 새 공지는 목록에서 확인하지 못했다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2와 Mythos 5.2 공개</h4><p>IPO 관련 글들 직전의 제품 발표로, 이전 호에서 다뤘다.</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-17">11월 17일</time><div><h4><a href="https://www.anthropic.com/research/claude-black-hole-physics">Claude solves two open problems in the physics of black holes</a><span class="tag">과학</span></h4><p>목록 최상단 글이며 이전 호에서 다뤘다. 이후 새 연구 글은 올라오지 않았다.</p></div></li>
+      <li><time datetime="2026-11-16">11월 16일</time><div><h4><a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Updating our coordinated vulnerability disclosure policy timelines</a><span class="tag">엔지니어링</span></h4><p>취약점 공개 기한 정책 갱신. 목록상 분류는 Frontier Red Team이다.</p></div></li>
+      <li><time datetime="2026-11-06">11월 6일</time><div><h4><a href="https://www.anthropic.com/research/teaching-ai-to-build-scientific-models">Teaching AI to build scientific models</a><span class="tag">과학</span></h4><p>이전 호에서 다루지 않은 글. 제목만 확인했고 본문은 열람하지 않아 내용은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a>, 제품 소식은 <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>새로 확인한 기기·칩 없음</h3><p>이번 조사에서는 이전 호 이후 새로 공개된 기기나 칩을 확인하지 못했다. 억지로 채우지 않고 비워 둔다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Kimi K3.1 Pro는 미확인</h3><p>11월 4일 Apache 2.0 가중치 공개라는 2차 보도가 있으나 Moonshot AI의 공지는 확인하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI</a> (2차)</p></div>
+      <div><h3>Rust 최신 글</h3><p>Rust 블로그에서 11월 16일 이후 새 글은 없다. 직전 정식 릴리스는 11월 12일의 1.100.0이다.</p><p class="src"><a href="https://blog.rust-lang.org/">Rust Blog</a></p></div>
+      <div><h3>트렌딩 1위는 Claude Code 스킬</h3><p>Claude-BugHunter가 하루 +1,721 스타로 가장 많이 늘었다. 스타 수는 트렌딩 페이지 기준이다.</p><p class="src"><a href="https://github.com/trending?since=daily">GitHub</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 23일에 웹 검색으로 수집한 보도를 한국어로 정리한 제23호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
