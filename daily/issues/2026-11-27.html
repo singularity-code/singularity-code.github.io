@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제27호 (2026-11-27)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 27일 금요일</span><span>제27호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Claude가 블랙홀 물리학 미해결 문제 두 건을 풀었다고 Anthropic이 밝혔다: 6주간 병렬 에이전트, 물리학자 검토</h2>
+    <p class="deck">11월 17일 Anthropic 연구 글의 내용이다. 이후 새로 확인된 모델·릴리스 소식이 거의 없는 날이라 연구 글을 헤드라인으로 삼았다. 결과는 개발사 자체 보고다.</p>
+    <div class="body">
+      <p>첫 번째는 뜨거운 양자 우주가 입자 기체에서 블랙홀로 바뀌는 Hawking-Page 전이다. 2003년에 결정적 계산의 윤곽이 제시됐으나 끝나지 않았던 문제로, Claude가 자신의 사본 여러 개를 병렬로 돌려 계산을 완성했고 전이가 약결합과 강결합 양쪽에서 급격하다는 결론을 얻었다고 한다.</p>
+      <p>두 번째는 양자 중력 이론 중 모순된 것을 걸러 내는 modular bootstrap 방법의 단순화된 2차원 공간 버전이다. Claude가 기존 수치 결과에서 패턴을 찾고 spectral curve라는 수학 도구를 빌려 가장 가벼운 블랙홀 질량의 정확한 상한을 유도했으며, 이 방식으로는 그 한계를 더 낮출 수 없음도 보였다고 한다.</p>
+      <p>과정은 연구자 한 명이 Claude에게 미해결 문제 목록을 만들게 한 뒤, 별도 에이전트들이 약 6주간 백그라운드에서 작업한 것이다. 다른 에이전트가 교차 검증했고 두 번째 결과는 증명 검사기로, 주요 결과는 물리학자가 검토했다. 단서도 있다. 두 결과 모두 우리 우주를 설명하거나 실용적 응용이 있는 것은 아니고, 두 번째가 올바른 양자 중력 이론을 가려내는 것도 아니다. 첫 번째 결과는 중간 결합 세기에서도 급격한 전이가 유지된다는 가정에 기대며 이는 증명되지 않았다. 독립 검증은 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://www.anthropic.com/research/claude-black-hole-physics">Anthropic Research</a> (개발사 자체 보고)</p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-17">11/17</time><span>GPT-6.2 Astra / Sol<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Gemini 4 Hydrogen · Carbon (정식 공개)<small>Google DeepMind</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Arete-27B (가중치 공개)<small>Nous Research</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>MiniMax H3-Image (가중치 공개)<small>MiniMax</small></span></li>
+      <li><time datetime="2026-11-12">11/12</time><span>Clairic (Apache 2.0 공개 예정)<small>Cloudflare</small></span></li>
+      <li><time datetime="2026-11-09">11/9</time><span>Claude Fable 5.2 / Mythos 5.2<small>Anthropic</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">11월 17일 GPT-6.2 이후 새 모델 공개는 확인하지 못했다. 출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI</a> (2차)</p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>TIOBE 등 새 순위 발표는 이번에도 확인하지 못했다.</p></div>
+      <div><h3>새 릴리스</h3><p>이번 조사에서 새로 확인한 공식 릴리스는 없다. 검색에서 확인된 가장 가까운 것은 11월 11일자 Go 1.27.4·1.26.11 보안 패치뿐이며, 집계 사이트(Releasebot) 기준이라 공식 노트는 미확인이다.</p><p class="src"><a href="https://releasebot.io/updates/categories/programming-languages">Releasebot</a> (2차)</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 사냥·외부 레드팀용 Claude Code 스킬 묶음. 오늘 하루 스타 +1,597.</p><div class="rs"><span class="bar"><i style="--w:7.5"></i></span><span class="sv">2.5만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/obra/superpowers"><i>obra/</i>superpowers</a><p>에이전트 스킬 프레임워크와 소프트웨어 개발 방법론.</p><div class="rs"><span class="bar"><i style="--w:100.0"></i></span><span class="sv">32.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/HKUDS/CLI-Anything"><i>HKUDS/</i>CLI-Anything</a><p>소프트웨어를 CLI로 감싸 에이전트가 쓸 수 있게 한다.</p><div class="rs"><span class="bar"><i style="--w:20.3"></i></span><span class="sv">6.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/jingyaogong/minimind"><i>jingyaogong/</i>minimind</a><p>64M 파라미터 LLM을 약 2시간에 처음부터 학습시키는 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:21.9"></i></span><span class="sv">7.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cursor/plugins"><i>cursor/</i>plugins</a><p>Cursor 플러그인 사양과 공식 플러그인 모음.</p><div class="rs"><span class="bar"><i style="--w:6.0"></i></span><span class="sv">2.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/firecrawl/firecrawl"><i>firecrawl/</i>firecrawl</a><p>검색·스크래핑·데이터 제공자 550여 곳을 한 API로 제공.</p><div class="rs"><span class="bar"><i style="--w:64.4"></i></span><span class="sv">21.1만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/nginx/nginx"><i>nginx/</i>nginx</a><p>NGINX 오픈소스 웹 서버 공식 저장소.</p><div class="rs"><span class="bar"><i style="--w:10.2"></i></span><span class="sv">3.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openvinotoolkit/openvino"><i>openvinotoolkit/</i>openvino</a><p>AI 추론을 최적화·배포하는 오픈소스 툴킷.</p><div class="rs"><span class="bar"><i style="--w:3.9"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cathrynlavery/diagram-design"><i>cathrynlavery/</i>diagram-design</a><p>코딩 에이전트용 다이어그램 스킬. 다이어그램 유형 52종.</p><div class="rs"><span class="bar"><i style="--w:22.6"></i></span><span class="sv">7.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 플랫폼에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:23.1"></i></span><span class="sv">7.6만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준이며 막대는 목록 내 최대값 대비. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 27일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-20">11월 20일</time><div><h4>Anthropic, IPO 마감 발표</h4><p>뉴스 목록의 최신 글로, 이전 호에서 다뤘다. 이후 새 공지는 목록에서 확인하지 못했다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2와 Mythos 5.2 공개</h4><p>이전 호에서 다뤘다.</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-25">11월 25일</time><div><h4><a href="https://www.anthropic.com/research/migrating-api-to-rust">Migrating our Messages API to Rust</a><span class="tag">엔지니어링</span></h4><p>이전 호의 헤드라인. Messages API를 Rust로 재작성한 과정과 결과.</p></div></li>
+      <li><time datetime="2026-11-23">11월 23일</time><div><h4><a href="https://www.anthropic.com/research/working-with-ai">Working with AI</a><span class="tag">경제</span></h4><p>기업 인터뷰 기반 AI 도입 보고서. 이전 호에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-17">11월 17일</time><div><h4><a href="https://www.anthropic.com/research/claude-black-hole-physics">Claude solves two open problems in the physics of black holes</a><span class="tag">과학</span></h4><p>오늘의 헤드라인. Claude가 블랙홀 물리학 미해결 문제 두 건을 풀었다는 개발사 보고.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a>, 제품 소식은 <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>새로 확인한 기기·칩 없음</h3><p>이번 조사에서는 새로 공개된 기기나 칩을 확인하지 못했다. 억지로 채우지 않고 비워 둔다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Kimi K3.1 Pro 가중치</h3><p>ThursdAI는 11월 5일 항목에 Kimi K3.1 Pro를 맞춤 라이선스의 오픈 웨이트로 적었다. 검색 결과 중에는 Apache 2.0이라는 상반된 서술도 있어 라이선스는 미확인이며, Hugging Face 페이지는 열람하지 못했다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI</a> (2차)</p></div>
+      <div><h3>트렌딩 1위는 Claude Code 스킬</h3><p>Claude-BugHunter가 하루 +1,597 스타로 가장 많이 늘었다. 트렌딩 목록 10개 저장소는 어제와 같다.</p><p class="src"><a href="https://github.com/trending">GitHub</a></p></div>
+      <div><h3>Anthropic, 취약점 공개 정책 일정 갱신</h3><p>11월 16일 Frontier Red Team이 coordinated vulnerability disclosure 정책의 타임라인을 갱신하는 글을 올렸다. 목록의 제목과 날짜만 확인했고 구체적인 변경 내용은 미확인이다.</p><p class="src"><a href="https://www.anthropic.com/research/coordinated-vulnerability-disclosure-timelines">Anthropic Research</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 27일에 웹 검색으로 수집한 보도를 한국어로 정리한 제27호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
