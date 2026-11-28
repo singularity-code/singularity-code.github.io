@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base target="_blank">
+<title>데일리 바이트 제28호 (2026-11-28)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="top">
+    <div class="brand"><a href="../index.html" target="_self">데일리 바이트</a><span>AI·개발·신제품 브리핑</span></div>
+    <div class="dateline"><span>2026년 11월 28일 토요일</span><span>제28호</span></div>
+  </div>
+  <nav class="chips" aria-label="섹션 이동">
+    <a href="#models" target="_self">AI 모델</a>
+    <a href="#dev" target="_self">개발자</a>
+    <a href="#claude" target="_self">Claude</a>
+    <a href="#products" target="_self">신제품</a>
+    <a href="#brief" target="_self">단신</a>
+  </nav>
+</header>
+
+<section class="hero" id="models">
+  <article>
+    <h2 id="headline">Tencent, 224B 파라미터 Hy4 Flash 가중치 공개: 활성 약 120억, 컨텍스트 100만 토큰</h2>
+    <p class="deck">11월 19일 Tencent가 Hy4 Flash의 모델 가중치를 내려받을 수 있게 했다. 모든 수치는 Tencent 발표 기준이며 독립 검증은 확인하지 못했다.</p>
+    <div class="body">
+      <p>TechNode에 따르면 Tencent는 앱과 클라우드 API로 모델을 먼저 내놓고 이틀 뒤인 수요일에 가중치를 풀었다. 이는 앞서 예고한 공개의 이행이다. 표준 모델, FP8 버전, 추가 학습용 베이스 모델이 함께 제공되고 배포 자료도 같이 올라왔다.</p>
+      <p>규모는 총 약 2,240억 파라미터에 토큰당 활성 약 120억이며, 텍스트와 이미지를 입력받고 컨텍스트는 최대 100만 토큰이다. Tencent는 리서치, 문서 작성, 스프레드시트 같은 일상 업무용을 겨냥한다고 밝혔다. 기사에는 벤치마크 결과와 하드웨어 요건이 없어 성능은 미확인이다.</p>
+      <p>라이선스는 Apache 2.0이 아니라 Tencent Hy License다. 조항은 기사에 설명되어 있지 않아 쓰기 전에 직접 확인해야 한다. 같은 Hy4 계열의 플래그십 가중치 공개 상태도 이번 조사에서는 확인하지 못했다.</p>
+      <p class="src">출처 <a href="https://technode.com/2026/11/19/tencent-releases-hy4-flash-model-weights-for-local-deployment/">TechNode</a></p>
+    </div>
+  </article>
+  <aside class="models" aria-label="최근 나온 모델">
+    <h3>최근 나온 모델</h3>
+    <ul>
+      <li><time datetime="2026-11-23">11/23</time><span>GLM-5.4 (가중치는 추후)<small>Z.ai</small></span></li>
+      <li><time datetime="2026-11-20">11/20</time><span>Inkling 2 Mini (가중치 공개)<small>Thinking Machines</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span class="hl">Hy4 Flash (가중치 공개)<small>Tencent</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span>Inkling 2 Small (가중치 공개)<small>Thinking Machines</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span>Clairic · Clairic Flash (공개)<small>Cloudflare</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span>Qwen4-Max<small>Alibaba Qwen</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span>GPT-6.2 Astra / Sol<small>OpenAI</small></span></li>
+      <li><time datetime="2026-11-19">11/19</time><span>Gemini 4 Neon<small>Google DeepMind</small></span></li>
+    </ul>
+    <p class="src" style="margin-top:12px">Hy4 Flash 외에는 ThursdAI 목록 기준(2차)이라 날짜와 공개 범위를 원문에서 확인하지 못했다. 출처 <a href="https://thursdai.news/releases/2026-11">ThursdAI</a></p>
+  </aside>
+</section>
+
+<section class="sec" id="dev">
+  <div class="rail"><h2>개발자</h2><p>언어 순위, 새 릴리스, 지금 GitHub에서 인기 있는 저장소</p></div>
+  <div class="main">
+    <div class="two">
+      <div><h3>언어 순위</h3><p>새 발표는 없다. 검색 결과의 제목 기준으로 11월 TIOBE 지수는 Java가 C++를 앞지르고 Go가 Rust를 Top 10 밖으로 밀어냈다고 한다. 세부 순위와 수치는 기사 열람이 막혀 미확인이며, 12월 지수는 아직 나오지 않았다.</p><p class="src">출처 <a href="https://www.techrepublic.com/article/news-tiobe-november-2026-java-overtakes-cpp/">TechRepublic</a></p></div>
+      <div><h3>새 릴리스</h3><p>이번 조사에서 새로 확인한 공식 언어·런타임 릴리스는 없다. 직전 정식 릴리스는 11월 12일 Rust 1.100.0이다.</p></div>
+    </div>
+
+    <h3>GitHub 인기 저장소</h3>
+    <ul class="repos">
+      <li class="repo"><a class="rn" href="https://github.com/elementalsouls/Claude-BugHunter"><i>elementalsouls/</i>Claude-BugHunter</a><p>버그 사냥·외부 레드팀용 Claude Code 스킬 묶음. 오늘 하루 스타 +1,608.</p><div class="rs"><span class="bar"><i style="--w:8"></i></span><span class="sv">2.6만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/obra/superpowers"><i>obra/</i>superpowers</a><p>에이전트 스킬 프레임워크와 소프트웨어 개발 방법론.</p><div class="rs"><span class="bar"><i style="--w:100"></i></span><span class="sv">32.8만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/HKUDS/CLI-Anything"><i>HKUDS/</i>CLI-Anything</a><p>소프트웨어를 CLI로 감싸 에이전트가 쓸 수 있게 한다.</p><div class="rs"><span class="bar"><i style="--w:20"></i></span><span class="sv">6.7만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/jingyaogong/minimind"><i>jingyaogong/</i>minimind</a><p>64M 파라미터 LLM을 약 2시간에 처음부터 학습시키는 프로젝트.</p><div class="rs"><span class="bar"><i style="--w:22"></i></span><span class="sv">7.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cursor/plugins"><i>cursor/</i>plugins</a><p>Cursor 플러그인 사양과 공식 플러그인 모음.</p><div class="rs"><span class="bar"><i style="--w:6"></i></span><span class="sv">2.0만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/firecrawl/firecrawl"><i>firecrawl/</i>firecrawl</a><p>에이전트가 검색·스크래핑·여러 데이터 제공자를 한 API로 쓰게 하는 데이터 인프라.</p><div class="rs"><span class="bar"><i style="--w:64"></i></span><span class="sv">21.2만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/nginx/nginx"><i>nginx/</i>nginx</a><p>NGINX 오픈소스 웹 서버 공식 저장소.</p><div class="rs"><span class="bar"><i style="--w:10"></i></span><span class="sv">3.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/openvinotoolkit/openvino"><i>openvinotoolkit/</i>openvino</a><p>AI 추론을 최적화·배포하는 오픈소스 툴킷.</p><div class="rs"><span class="bar"><i style="--w:4"></i></span><span class="sv">1.3만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/cathrynlavery/diagram-design"><i>cathrynlavery/</i>diagram-design</a><p>코딩 에이전트용 다이어그램 스킬. 독립 실행형 HTML·SVG를 만든다.</p><div class="rs"><span class="bar"><i style="--w:23"></i></span><span class="sv">7.4만</span></div></li>
+      <li class="repo"><a class="rn" href="https://github.com/mvanhorn/last30days-skill"><i>mvanhorn/</i>last30days-skill</a><p>여러 플랫폼에서 주제를 조사해 요약하는 에이전트 스킬.</p><div class="rs"><span class="bar"><i style="--w:23"></i></span><span class="sv">7.6만</span></div></li>
+    </ul>
+    <p class="src">스타 수는 트렌딩 페이지 열람 시점 기준이며 막대는 목록 내 최대값 대비. 출처 <a href="https://github.com/trending">GitHub Trending</a></p>
+  </div>
+</section>
+
+<section class="sec" id="claude">
+  <div class="rail"><h2>Claude</h2><p>제품 소식과 anthropic.com/research의 최신 글 (11월 28일 확인)</p></div>
+  <div class="main">
+    <h3>제품 소식</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-20">11월 20일</time><div><h4>Anthropic, IPO 마감 발표</h4><p>뉴스 목록의 최신 글로, 이전 호에서 다뤘다. 이후 새 공지는 목록에서 확인하지 못했다.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4>Claude Fable 5.2와 Mythos 5.2 공개</h4><p>이전 호에서 다뤘다.</p></div></li>
+    </ul>
+    <h3>연구 노트</h3>
+    <ul class="rows">
+      <li><time datetime="2026-11-25">11월 25일</time><div><h4><a href="https://www.anthropic.com/research/migrating-api-to-rust">Migrating our Messages API to Rust</a><span class="tag">엔지니어링</span></h4><p>Messages API를 Rust로 재작성한 과정과 결과. 이전 호에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-23">11월 23일</time><div><h4><a href="https://www.anthropic.com/research/working-with-ai">Working with AI</a><span class="tag">경제</span></h4><p>기업 인터뷰 기반 AI 도입 보고서. 이전 호에서 다뤘다.</p></div></li>
+      <li><time datetime="2026-11-13">11월 13일</time><div><h4><a href="https://www.anthropic.com/research/building-strong-safety-evaluations">Building strong safety evaluations</a><span class="tag">엔지니어링</span></h4><p>제목과 날짜만 목록에서 확인했고 본문은 열람하지 않아 내용은 미확인.</p></div></li>
+      <li><time datetime="2026-11-09">11월 9일</time><div><h4><a href="https://www.anthropic.com/research/claude-electronics-design">Testing Claude on real-world electronics design</a><span class="tag">과학</span></h4><p>제목과 날짜만 확인했고 본문은 미확인.</p></div></li>
+    </ul>
+    <p class="src">전체 목록은 <a href="https://www.anthropic.com/research">anthropic.com/research</a>, 제품 소식은 <a href="https://www.anthropic.com/news">anthropic.com/news</a></p>
+  </div>
+</section>
+
+<section class="sec" id="products">
+  <div class="rail"><h2>신제품</h2><p>최근 공개된 기기와 칩</p></div>
+  <div class="main">
+    <div class="trio">
+      <div><h3>새로 확인한 기기·칩 없음</h3><p>이번 조사에서는 새로 공개된 기기나 칩을 확인하지 못했다. 억지로 채우지 않고 비워 둔다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="brief" style="border-bottom:0">
+  <div class="rail"><h2>단신</h2><p>짧게 보는 오늘의 소식</p></div>
+  <div class="main">
+    <div class="quad">
+      <div><h3>Inkling 2 가중치 공개 보도</h3><p>ThursdAI 목록에는 Thinking Machines의 Inkling 2 Small(11/19)과 Mini(11/20)가 오픈 웨이트로 올라 있다. 개발사 원문은 열람하지 못해 규모와 라이선스는 미확인이다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>Anthropic 제품 업데이트 두 건</h3><p>같은 목록은 11월 24일 항목으로 Claude artifacts의 데스크톱 앱화와 MCP 위의 Skills를 적었다. Anthropic 공식 뉴스 목록에서는 확인되지 않아 미확인이다.</p><p class="src"><a href="https://thursdai.news/releases/2026-11">ThursdAI (2차)</a></p></div>
+      <div><h3>트렌딩 1위는 Claude-BugHunter</h3><p>Claude Code 스킬 묶음 Claude-BugHunter가 하루 +1,608 스타로 가장 많이 늘었다. 10개 저장소 구성은 어제와 같다.</p><p class="src"><a href="https://github.com/trending">GitHub</a></p></div>
+      <div><h3>Hy4 플래그십 가중치는 미확인</h3><p>검색 결과에는 Tencent가 11월 4일 Hy4를 API로 먼저 내고 가중치는 곧 공개하겠다고 했다는 서술이 있다. 이후 공개 여부는 확인하지 못했다.</p><p class="src"><a href="https://www.scmp.com/tech/big-tech/article/3373227/tencent-unveils-hy4-open-weight-ai-race-deepseek-zai-alibaba-heats">SCMP</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>이 브리핑은 2026년 11월 28일에 웹 검색으로 수집한 보도를 한국어로 정리한 제28호입니다. 2차 보도를 인용한 수치도 있으니 중요한 판단 전에는 원문을 확인하세요.</p>
+  <p>GitHub 스타 수와 벤치마크 점수는 보도 또는 개발사 발표 시점의 수치이며 독립 검증을 거치지 않은 것이 있습니다.</p>
+</footer>
+
+</div>
+</body>
+</html>
